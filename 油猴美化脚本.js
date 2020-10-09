@@ -1,0 +1,56 @@
+// ==UserScript==
+// @name         综合美化脚本
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  综合美化脚本
+// @author       You
+// @include      *://*.zhihu.com/*
+// @include      https://www.baidu.com/
+// @match
+// @grant        GM_addStyle
+// ==/UserScript==
+
+(function () {
+  "use strict";
+
+  //知乎
+  if (window.location.host == "www.zhihu.com") {
+    console.log("知乎油猴...");
+    GM_addStyle(`
+      .AdblockBanner, .Footer {
+        display: none !important;
+      }
+    `);
+  }
+
+  //百度首页
+  if (window.location.host == "www.baidu.com") {
+    console.log("百度油猴...");
+    document.getElementById("s_mp").remove();
+    GM_addStyle(`
+      #s-top-left, #u1, #s_side_wrapper, #bottom_layer, .s-menu-container,
+      .ipt_rec, .c-color-text, .s-mblock-title .s-opacity-border4-bottom,
+      .s-top-nav, .tips-manager-area {
+          display: none !important;
+      }
+      .s-block-container, #s_main {
+          padding: 0;
+      }
+      .s-skin-hasbg .s-top-wrap{
+          background: rgba(0,0,0,0);
+      }
+      .s-skin-hasbg #s_main {
+          background: rgba(0,0,0,.2);
+      }
+      .nav-text {
+        color: rgba(255,255,255,1);
+      }
+      .nav-icon>img, .nav-icon-normal {
+          border-radius: 16px !important;
+      }
+      .s-content {
+        padding-bottom: 0px;
+      }
+    `);
+  }
+})();

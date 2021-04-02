@@ -7,6 +7,7 @@
 // @include      *://*.zhihu.com/*
 // @include      https://www.baidu.com/
 // @include      *://www.jianshu.com/go-wild?*
+// @include      *://blog.csdn.net/*
 // @match
 // @require      http://code.jquery.com/jquery-1.11.0.min.js
 // @grant        GM_addStyle
@@ -61,23 +62,31 @@
   if (window.location.host == "www.jianshu.com") {
     console.log("简书油猴...");
 
-    (function() {
-      var btn = $('._3OuyzjzFBDdQwRGk08HXHz_0');
+    (function () {
+      var btn = $("._3OuyzjzFBDdQwRGk08HXHz_0");
       var count = 2;
-      var time = setInterval(function() {
-        btn.text(count + '秒后自动打开');
+      var time = setInterval(function () {
+        btn.text(count + "秒后自动打开");
         count--;
         if (count == 0) {
-            clearInterval(time);
-            var url = $('._2VEbEOHfDtVWiQAJxSIrVi_0').val();
-            window.location.href = url;
+          clearInterval(time);
+          var url = $("._2VEbEOHfDtVWiQAJxSIrVi_0").val();
+          window.location.href = url;
         }
       }, 1000);
     })();
-
     GM_addStyle(`
-      
+
     `);
   }
 
+  //csdn
+  if (window.location.host == "blog.csdn.net") {
+    console.log("csdn油猴...");
+    GM_addStyle(`
+        .toolbar-advert {
+          display: none !important;
+        }
+      `);
+  }
 })();

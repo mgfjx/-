@@ -48,11 +48,14 @@
 
   //啪啪啪视频
   if (window.location.host == "kuaijiez.com") {
+    $(".content > div > a > img").remove();
+
+    $("xmduizz").remove();
+    $("xmdui11").remove();
     GM_addStyle(`
     #sucss {
       display: none !important;
     }
   `);
   }
-
 })();

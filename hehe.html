@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript" src="https://libs.cdnjs.net/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+  <script type="text/javascript">
+
+    $("body").append('<div class="xldiv"></div>');
+
+    $(".xldiv").css({
+      "height":"20px", 
+      "width":"20px", 
+      "background-color":"#ff0000", 
+      "position": "absolute", 
+      "right": "20px", 
+      "bottom": "20px", 
+      "border-radius": "10px",
+    });
+
+    $(".xldiv").click(function() {
+      alert("shit");
+    });
+
+    
+  </script>
+
+</body>
+</html>

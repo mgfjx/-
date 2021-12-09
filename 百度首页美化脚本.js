@@ -30,11 +30,12 @@
     $(".xldiv").css({
       height: "20px",
       width: "20px",
-      "background-color": "#ff0000",
+      backgroundColor: "#ff0000",
       position: "absolute",
       right: "20px",
       bottom: "20px",
-      "border-radius": "10px",
+      borderRadius: "10px",
+      boxShadow: "0px 0px 20px #888888",
     });
 
     $("#s_main").css({ display: "none" });

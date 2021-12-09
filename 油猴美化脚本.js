@@ -21,8 +21,11 @@
   if (window.location.host == "www.zhihu.com") {
     console.log("知乎油猴...");
     GM_addStyle(`
-      .AdblockBanner, .Footer {
+      .AdblockBanner, .Footer, .GlobalSideBar {
         display: none !important;
+      }
+      .Topstory-mainColumn {
+        width: 100%;
       }
     `);
   }
@@ -56,6 +59,7 @@
   //csdn
   if (window.location.host == "blog.csdn.net") {
     console.log("csdn油猴...");
+    javascript:document.body.contentEditable='true';document.designMode='on';
     GM_addStyle(`
         .toolbar-advert {
           display: none !important;

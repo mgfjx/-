@@ -8,6 +8,7 @@
 // @include      *://www.jianshu.com/*
 // @include      *://blog.csdn.net/*
 // @include      *://www.pgyer.com/*
+// @include      *://www.google.com.*/?*
 // @match
 // @require      http://code.jquery.com/jquery-1.11.0.min.js
 // @grant        GM_addStyle
@@ -35,19 +36,10 @@
     console.log("简书油猴...");
 
     (function () {
-      var btn = $("._3OuyzjzFBDdQwRGk08HXHz_0");
-      var count = 3;
-      var time = setInterval(function () {
-        btn.text(count + "秒后自动打开");
-        if (count == 1) {
-          clearInterval(time);
-          var url = $("._2VEbEOHfDtVWiQAJxSIrVi_0").text();
-          if (url) {
-            window.location.href = url;
-          }
-        }
-        count--;
-      }, 1000);
+      var url = $("._2VEbEOHfDtVWiQAJxSIrVi_0").text();
+      if (url) {
+        window.location.href = url;
+      }
     })();
     GM_addStyle(`
       ._1F7CTF, ._13lIbp, ._1jKNin {
@@ -59,7 +51,7 @@
   //csdn
   if (window.location.host == "blog.csdn.net") {
     console.log("csdn油猴...");
-    javascript:document.body.contentEditable='true';document.designMode='on';
+    javascript: document.body.contentEditable = 'true'; document.designMode = 'on';
     GM_addStyle(`
         .toolbar-advert {
           display: none !important;
@@ -73,6 +65,22 @@
     GM_addStyle(`
         .ad-container {
           display: none !important;
+        }
+      `);
+  }
+
+  //谷歌
+  let host = window.location.host;
+  if (host.indexOf("www.google.com") != -1) {
+    console.log("谷歌油猴...");
+    GM_addStyle(`
+        .lJ9FBc, #SIvCob, .XDyW0e {
+          display: none !important;
+        }
+        .c93Gbe {
+        background-color: rgba(0,0,0,0) !important;
+        }
+        .L3eUgb {
         }
       `);
   }

@@ -8,7 +8,7 @@
 // @include      *://www.jianshu.com/*
 // @include      *://blog.csdn.net/*
 // @include      *://www.pgyer.com/*
-// @include      *://www.google.com.*/?*
+// @include      https://www.google.com.*/?*
 // @match
 // @require      http://code.jquery.com/jquery-1.11.0.min.js
 // @grant        GM_addStyle
@@ -51,7 +51,7 @@
   //csdn
   if (window.location.host == "blog.csdn.net") {
     console.log("csdn油猴...");
-    javascript: document.body.contentEditable = 'true'; document.designMode = 'on';
+    javascript:document.body.contentEditable='true';document.designMode='on';
     GM_addStyle(`
         .toolbar-advert {
           display: none !important;
@@ -74,14 +74,11 @@
   if (host.indexOf("www.google.com") != -1) {
     console.log("谷歌油猴...");
     GM_addStyle(`
-        .lJ9FBc, #SIvCob, .XDyW0e {
+        .lJ9FBc, #SIvCob, .iblpc, .XDyW0e {
           display: none !important;
         }
         .c93Gbe {
         background-color: rgba(0,0,0,0) !important;
-        }
-        .L3eUgb {
-        }
       `);
   }
 })();

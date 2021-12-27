@@ -36,17 +36,17 @@
 
     (function () {
       var btn = $("._3OuyzjzFBDdQwRGk08HXHz_0");
-      var count = 2;
+      var count = 3;
       var time = setInterval(function () {
         btn.text(count + "秒后自动打开");
-        count--;
-        if (count == 0) {
+        if (count == 1) {
           clearInterval(time);
-          var url = $("._2VEbEOHfDtVWiQAJxSIrVi_0").val();
+          var url = $("._2VEbEOHfDtVWiQAJxSIrVi_0").text();
           if (url) {
             window.location.href = url;
           }
         }
+        count--;
       }, 1000);
     })();
     GM_addStyle(`

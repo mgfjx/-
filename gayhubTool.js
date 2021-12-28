@@ -21,7 +21,10 @@
         const item = clipboards[index];
         let value = $(item).val();
         console.log(value);
-        $(item).val('git clone ' + value);
+        let modifyValue = 'git clone ' + value;
+        $(item).val(modifyValue);
+        let modifyCopy = modifyValue + ' copied!';
+        $(item).attr("data-copy-feedback", modifyCopy);
     }
 
     let inputs = $(".input-group input");

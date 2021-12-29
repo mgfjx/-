@@ -25,8 +25,11 @@
       .AdblockBanner, .Footer, .GlobalSideBar {
         display: none !important;
       }
-      .Topstory-mainColumn {
-        width: 100%;
+      .Question-main .Question-sideColumn {
+              display: none !important;
+      }
+      .Topstory-mainColumn, .Question-mainColumn {
+        width: 100% !important;
       }
     `);
   }
@@ -51,7 +54,8 @@
   //csdn
   if (window.location.host == "blog.csdn.net") {
     console.log("csdn油猴...");
-    javascript:document.body.contentEditable='true';document.designMode='on';
+    javascript: document.body.contentEditable = "true";
+    document.designMode = "on";
     GM_addStyle(`
         .toolbar-advert {
           display: none !important;
@@ -72,7 +76,10 @@
   //谷歌
   let host = window.location.host;
   if (host.indexOf("www.google.com") != -1) {
-    $("body").attr("background", "https://dss3.bdstatic.com/iPoZeXSm1A5BphGlnYG/skin/206.jpg?2");
+    $("body").attr(
+      "background",
+      "https://dss3.bdstatic.com/iPoZeXSm1A5BphGlnYG/skin/206.jpg?2"
+    );
     console.log("谷歌油猴...");
     GM_addStyle(`
         .lJ9FBc, #SIvCob, .iblpc, .XDyW0e {

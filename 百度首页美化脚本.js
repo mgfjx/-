@@ -32,13 +32,14 @@
     $("body").append('<img class="xldiv" src="' + GM_getResourceURL("Icon") +'" />');
     $("#head").attr("background", GM_getResourceURL("paper"));
     $(".xldiv").css({
-      height: "30px",
-      width: "30px",
+      height: "20px",
+      width: "20px",
       position: "absolute",
       right: "20px",
       bottom: "20px",
       borderRadius: "10px",
       boxShadow: "0px 0px 30px #888888",
+      padding: 5,
     });
 
     $("#s_main").css({ display: "none" });

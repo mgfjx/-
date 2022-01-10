@@ -90,7 +90,7 @@
     });
 
     Promise.all([P1, P2, P3]).then(function (results) {
-      let iconTitle = $('.top-title span').text();
+      let iconTitle = $('.top-title span')[0].innerText;
       console.log(iconTitle);
       var zip = new JSZip();
       var img = zip.folder(iconTitle);

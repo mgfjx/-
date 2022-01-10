@@ -7,6 +7,7 @@
 // @include      https://www.iconfont.cn/*
 // @match
 // @require      http://code.jquery.com/jquery-1.11.0.min.js
+// @require      https://cdn.jsdelivr.net/npm/jszip@3.7.1/dist/jszip.min.js
 // @grant        GM_addStyle
 // @grant       unsafeWindow
 
@@ -16,10 +17,7 @@
   "use strict";
   console.log("IconFont油猴...");
 
-  var canvas = document.querySelector('canvas');
-
   function triggerDownload(imgURI) {
-    console.log('imgURI: ' + imgURI);
     var evt = new MouseEvent('click', {
       bubbles: false,
       cancelable: true
@@ -33,19 +31,12 @@
     a.dispatchEvent(evt);
   }
 
-  //开始下载
-  function downloadiOSPng() {
-    console.log('开始下载');
+  //生成对应尺寸图片URI
+  function getImageURIBy(width, height, callback) {
     var svg = $('.stage .icon')[0];
-    console.log(svg);
-    let width = $(svg).attr('width');
-    let height = $(svg).attr('height');
-    //如果不存在，则去尺寸设置里面去取
-    if (width == undefined || height == undefined) {
-      width = $('.size-pick-wrap input').attr('value');
-      height = width;
-    }
-    console.log('width: ' + width + ', height: ' + height) ;
+    //修改svg宽高为当前传入的宽高
+    $(svg).attr('width', width);
+    $(svg).attr('height', height);
     var canvas = document.createElement('canvas');
     canvas.width = width;
     canvas.height = height;
@@ -60,15 +51,64 @@
     img.onload = function () {
       ctx.drawImage(img, 0, 0);
       DOMURL.revokeObjectURL(url);
-
-      var imgURI = canvas
-        .toDataURL('image/png')
-        .replace('image/png', 'image/octet-stream');
-
-      triggerDownload(imgURI);
+      var imgURI = canvas.toDataURL('image/png');
+      callback(imgURI)
     };
-
     img.src = url;
+  }
+
+  //开始下载
+  function downloadiOSPng() {
+
+    //获取设置的宽高
+    var svg = $('.stage .icon')[0];
+    let width = $(svg).attr('width');
+    let height = $(svg).attr('height');;
+    if (width == undefined || height == undefined) {
+      width = $('.size-pick-wrap input').val();
+      height = width;
+    }
+    console.log('图片初始宽高: ' + width + "X" + height);
+
+    //@1x倍图
+    let P1 = new Promise(function (resolve, reject) {
+      getImageURIBy(width, height, function (imgURI) {
+        resolve(imgURI);
+      });
+    });
+    //@2x倍图
+    let P2 = new Promise(function (resolve, reject) {
+      getImageURIBy(width*2, height*2, function (imgURI) {
+        resolve(imgURI);
+      });
+    });
+    //@3x倍图
+    let P3 = new Promise(function (resolve, reject) {
+      getImageURIBy(width*3, height*3, function (imgURI) {
+        resolve(imgURI);
+      });
+    });
+
+    Promise.all([P1, P2, P3]).then(function (results) {
+      let iconTitle = $('.top-title span').text();
+      console.log(iconTitle);
+      var zip = new JSZip();
+      var img = zip.folder(iconTitle);
+      let base64_1 = results[0];
+      let base64_2 = results[1];
+      let base64_3 = results[2];
+      base64_1 = base64_1.replace(/^data:image\/(png|jpg);base64,/, "");
+      base64_2 = base64_2.replace(/^data:image\/(png|jpg);base64,/, "");
+      base64_3 = base64_3.replace(/^data:image\/(png|jpg);base64,/, "");
+      img.file( iconTitle + ".png", base64_1, {base64: true});
+      img.file( iconTitle + "@2x.png", base64_2, {base64: true});
+      img.file( iconTitle + "@3x.png", base64_3, {base64: true});
+      zip.generateAsync({type:"blob"})
+      .then(function(content) {
+          // see FileSaver.js
+          saveAs(content, iconTitle + ".zip");
+      });
+    });
   }
 
   //循环监听是否有xxl_btn按钮

@@ -5,7 +5,6 @@
 // @description  综合美化脚本
 // @author       You
 // @include      *://*.zhihu.com/*
-// @include      *://www.jianshu.com/*
 // @include      *://blog.csdn.net/*
 // @include      *://www.pgyer.com/*
 // @include      https://www.google.com.*/?*
@@ -30,23 +29,6 @@
       }
       .Topstory-mainColumn, .Question-mainColumn {
         width: 100% !important;
-      }
-    `);
-  }
-
-  //简书
-  if (window.location.host == "www.jianshu.com") {
-    console.log("简书油猴...");
-
-    (function () {
-      var url = $("._2VEbEOHfDtVWiQAJxSIrVi_0").text();
-      if (url) {
-        window.location.href = url;
-      }
-    })();
-    GM_addStyle(`
-      ._1F7CTF, ._13lIbp, ._1jKNin {
-        display: none !important;
       }
     `);
   }

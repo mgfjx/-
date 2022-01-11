@@ -113,6 +113,10 @@
 
   //循环监听是否有xxl_btn按钮
   let interval = setInterval(() => {
+    let img = $('.left-stage-container img');
+    if (img.length > 0) { //说明当前页面为插画页面，不需要添加下载按钮
+      return;
+    }
     let eles = $('.download-btns .btn');
     if (eles.length > 0) {
       // console.log("进入图标下载页面!");

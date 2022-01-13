@@ -27,11 +27,17 @@
   })();
 
   GM_addStyle(`
-    ._2OwGUo, ._19DgIp, ._13lIbp {
+    ._2OwGUo, ._19DgIp, ._13lIbp, ._1F7CTF {
       display: none !important;
     }
     ._gp-ck {
       width: 100% !important;
+    }
+    ._3VRLsv {
+      width: calc(100vw - 300px) !important;
+    }
+    ._3Pnjry {
+      left: calc((100vw - (100vw - 300px))/2 - 78px) !important;
     }
   `);
 

@@ -58,14 +58,17 @@
   //谷歌
   let host = window.location.host;
   if (host.indexOf("www.google.com") != -1) {
-    $("body").attr(
-      "background",
-      "https://dss3.bdstatic.com/iPoZeXSm1A5BphGlnYG/skin/206.jpg?2"
-    );
+    // $("body").attr(
+    //   "background",
+    //   "https://dss3.bdstatic.com/iPoZeXSm1A5BphGlnYG/skin/206.jpg?2"
+    // );
     console.log("谷歌油猴...");
     GM_addStyle(`
-        .lJ9FBc, #SIvCob, .iblpc, .XDyW0e {
+        .lJ9FBc, #SIvCob, .iblpc, .XDyW0e, .uU7dJb, .pHiOh {
           display: none !important;
+        }
+        .EzVRq, .gb_d {
+          color: rgba(255,255,255,255) !important;
         }
         .c93Gbe {
           background-color: rgba(0,0,0,0) !important;

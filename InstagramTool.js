@@ -8,6 +8,7 @@
 // @match
 // @require      http://code.jquery.com/jquery-1.11.0.min.js
 // @grant        GM_addStyle
+// @grant        GM_download
 // @grant        GM_getResourceURL
 // @resource     Icon data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAV9JREFUWEftlz1OxDAQhd+ruAtwAajYOyBKKg7CQago9xK7NHACuAvVQxPZkWPs2HEMK62SKsraM9+8+bGXOPHDE/tHM4Ckg8GT3K0JYg2AHECzjWF/K72kDWBT4MwUkPQM4B7AVdAZx1yfl7rAzYm70BaAN5LmZ3zGNkxssEU9AczeJ8nrHMCQUwA7ksfSfCgpEO6XZEr4yTmZPaECi4pqCYDB5NZvAEUFXHFeAHgi+eVzm5JU0iWAFwDfcfc0p0DSO4Abq2AADx4iNuic710bf5C8jQoxWWM1ClhU3vAIEQJEziegc4pNjuO5qk45cIqYDRtcvwDjNm5OQRBBrISfmBaxvScj76JABiIMctZ51zkQpWMYr2Fx5ibo6hREFW3peHXfHsP2/BeA0jmR+r2rAucNUHscL1Gh9ji28zq8wSzxUbt29kKSupLVGq5ZZ5ec/JWsxsJfrGn+a9YL5gehXCkwEsVaCAAAAABJRU5ErkJggg==
 // @resource     IconSelected data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAWpJREFUWEftVzFuwzAMvHjpSwgDbT+QTskfio6Z+pA8pFPHfKLu0rygBQy+pItTMJACWpUsWVYSILCnwKHI45E8ygtc+VlcOT6yATDzh4AnovWUJKYAOBgA2T7kfPZhZp4BzAzcGANt226rqnoG8KDmugnNeWwKjE6stK+u6z7rut5q3TiNoeeA2JUEIP6+iegxBOBYUwBrImpi6hZjQJ9nZmHCKmdPezQDo5pqDAABE7KfAUQZMM15B+CViH5sbX2UMvM9gDcAv+70ZJeAmb8ALKWDAbxYEK5DE3xnxnhPRE9OI3p7LIUByco6PoHQAJzgPaBDjPXW8VBX+wIYRsSHCNc/gO4YZ5dAZeAyYRVTMpbf3syLMBAAoZMcDF5UB5xyHOVVN2dIQSeXwOloKce7ebfR43kRALE94fu/KAO3DSB1HY9hIXUdy77WN5gxMVJtwxeSwJUs1XGKXTN4JUvxcA6b7E+zUmD+AEGaLzAChhEZAAAAAElFTkSuQmCC
@@ -55,12 +56,18 @@
         let url = arr[0].split(" ")[0];
         console.log(url);
         // window.open(url);
-        download(url);
+       download(url);
       });
   }
 
   function download(link) {
     let picName = Date.now() + '.jpg';
+
+    //使用油猴api下载资源
+    GM_download(link, picName);
+
+    //使用Image加载url后再保持图片图片数据，慢
+    /*
     let img = new Image();
     img.setAttribute("crossOrigin", "Anonymous");
     img.onload = function () {
@@ -77,6 +84,7 @@
       a.dispatchEvent(event);
     };
     img.src = link + "?v=" + Date.now();
+    */
   }
 
   window.onmouseover = function (e) {

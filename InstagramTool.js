@@ -52,8 +52,25 @@
       .unbind("click")
       .click(function () {
         let src = $(img).attr("srcset");
-        let arr = src.split(",");
-        let url = arr[0].split(" ")[0];
+        let url;
+        if (src != undefined) {
+          let arr = src.split(",");
+          let index = 0;
+          let preSize = 0;
+          for (let i = 0; i < arr.length; i++) {
+            const element = arr[i];
+            let size = element.split(" ")[1].replace("w", "");
+            console.log(`size: ${size}, src: ${element.split(" ")[0]}`);
+            if (Number(size) > preSize) {
+              preSize = Number(size);
+              index = i;
+            }
+          }
+          console.log(`index: ${index}`);
+          url = arr[index].split(" ")[0];
+        } else {
+          url = $(img).attr("src");
+        }
         console.log(url);
         // window.open(url);
        download(url);

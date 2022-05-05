@@ -21,25 +21,29 @@
 	right: 0;
 	bottom: 0;
   overflow:hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .ts_logo_container {
-  height: 10%;
+  flex: 1;
   background-color: aquamarine;
 }
 
 .ts_logo {
-  height: 80%;
+  height: 31px;
   margin-top: 3px;
 }
 
 .xl_input_container {
-  height: 75%;
+  /* height: 75%; */
+  flex: 7;
   background-color: blueviolet;
 }
 
 .xl_input_item {
-  height: 50%;
+  height: calc(50%);
+  width: calc(100%);
 }
 
 .xl_input_item textarea {
@@ -50,10 +54,16 @@
   padding: 5px;
 }
 
+.xl_ts_query {
+  background-color: rgb(151, 127, 146);
+}
 .xl_ts_query textarea {
   background-color: rgb(212, 80, 184);
 }
 
+.xl_ts_result {
+  background-color: rgb(53, 128, 214);
+}
 .xl_ts_result textarea {
   background-color: rgb(53, 128, 214);
 }
@@ -61,14 +71,26 @@
 .xl_ts_indicator {
   background-color: aqua;
   width: 100%;
-  height: 5%;
+  flex: 1;
+  display: table-cell;
+  vertical-align: middle;
 }
 
-.xl_ts_indicator div {
+.xl_ts_indicator_container {
+  background-color: azure;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.xl_ts_indicator_container div {
   display: inline;
+  flex: 1;
   background-color: rgb(122, 181, 239);
+  text-align: right;
 }
 
 .xl_ts_btn_container {
-  height: 10%;
+  flex: 2;
+  background-color: darkturquoise;
 }

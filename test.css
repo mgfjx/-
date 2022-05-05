@@ -87,7 +87,14 @@
   display: inline;
   flex: 1;
   background-color: rgb(122, 181, 239);
+}
+
+.xl_ts_indicator_container :first-child {
   text-align: right;
+}
+
+.xl_ts_indicator_container :last-child {
+  text-align: left;
 }
 
 .xl_ts_btn_container {

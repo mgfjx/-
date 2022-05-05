@@ -1,0 +1,74 @@
+.xl_ts_bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0, 0.8);
+  z-index: 10000;
+}
+
+.xl_ts_container {
+  text-align: center; /*让div内部文字居中*/
+	background-color: #fff;
+	border-radius: 20px;
+	width: 600px;
+	height: 370px;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+  overflow:hidden;
+}
+
+.ts_logo_container {
+  height: 10%;
+  background-color: aquamarine;
+}
+
+.ts_logo {
+  height: 80%;
+  margin-top: 3px;
+}
+
+.xl_input_container {
+  height: 75%;
+  background-color: blueviolet;
+}
+
+.xl_input_item {
+  height: 50%;
+}
+
+.xl_input_item textarea {
+  width: calc(100% - 5px * 2);
+  height: calc(100% - 5px * 2);
+  border-width: 0;
+  font-size: 20px;  
+  padding: 5px;
+}
+
+.xl_ts_query textarea {
+  background-color: rgb(212, 80, 184);
+}
+
+.xl_ts_result textarea {
+  background-color: rgb(53, 128, 214);
+}
+
+.xl_ts_indicator {
+  background-color: aqua;
+  width: 100%;
+  height: 5%;
+}
+
+.xl_ts_indicator div {
+  display: inline;
+  background-color: rgb(122, 181, 239);
+}
+
+.xl_ts_btn_container {
+  height: 10%;
+}

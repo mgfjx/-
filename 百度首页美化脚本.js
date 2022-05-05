@@ -21,6 +21,14 @@
   if (window.location.host == "www.baidu.com") {
     console.log("百度油猴...");
 
+    document.onkeydown = function (event) {
+      var e = event || window.event || arguments.callee.caller.arguments[0];
+      console.log("keyCode: " + e.keyCode);
+      if (e && e.keyCode == 91) {
+        showNavPanel();
+      }
+    };
+
     try {
       $("#s_mp").remove();
       $(".user-name").remove();
@@ -43,14 +51,16 @@
     });
 
     $("#s_main").css({ display: "none" });
-    $(".xldiv").click(function () {
+
+    function showNavPanel () {
       let display = $("#s_main").css("display");
       if (display == "none") {
         $("#s_main").css("display", "block");
       } else {
         $("#s_main").css({ display: "none" });
       }
-    });
+    }
+    $(".xldiv").click(showNavPanel);
 
     GM_addStyle(`
       #s-top-left, .s-weather-wrapper, #s_side_wrapper, #bottom_layer,

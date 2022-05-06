@@ -16,15 +16,16 @@
   console.log("黑白直播油猴...");
 
   setTimeout(() => {
-    $('.boxbot').remove();
-    $('.guessForm').remove();
+    $(".boxbot").remove();
+    $(".guessForm").remove();
   }, 200);
 
   //循环监听是否有video-logo按钮
   let interval = setInterval(() => {
-    let img = $('.video-logo');
-    if (img.length > 0) { //说明logo已经加载出来了
-      $('.video-logo').remove();
+    let img = $(".video-logo");
+    if (img.length > 0) {
+      //说明logo已经加载出来了
+      $(".video-logo").remove();
       clearInterval(interval);
       return;
     }
@@ -32,16 +33,28 @@
 
   //循环监听是否有video按钮
   let interval2 = setInterval(() => {
-    let media = $("#hbPlayer video"); 
-    console.log("Media: ");
-    console.log(media);
-    if (media.length > 0) { //说明logo已经加载出来了
-      setTimeout(() => {
-        $('#hbPlayer video').volume = 1.0;
-      }, 2000);
-      clearInterval(interval2);
-      return;
+    if (document.querySelector(`video`)) {
+      try {
+        const volumeAdio = document.querySelector(`video`);
+        let volume = volumeAdio.volume;
+        if (volume < 1.0) {
+          volumeAdio.volume = 1.0;
+          clearInterval(interval2);
+          console.log("设置音量成功!");
+        }
+      } catch (error) {}
     }
   }, 1000);
 
+  GM_addStyle(`
+    .boxright1, .adcarousal, .customer-service, .scrollbar  {
+      display: none !important;
+    }
+    .boxleft1 {
+      margin-right: auto !important;
+    }
+    #live #go-other .signalnav ul li {
+      min-width: 2% !important;
+    }
+  `);
 })();

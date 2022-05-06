@@ -9,18 +9,19 @@
 }
 
 .xl_ts_container {
-  text-align: center; /*让div内部文字居中*/
-	background-color: #fff;
-	border-radius: 20px;
-	width: 600px;
-	height: 370px;
-	margin: auto;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-  overflow:hidden;
+  text-align: center;
+  /*让div内部文字居中*/
+  background-color: #fff;
+  border-radius: 20px;
+  width: 600px;
+  height: 370px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -50,13 +51,14 @@
   width: calc(100% - 5px * 2);
   height: calc(100% - 5px * 2);
   border-width: 0;
-  font-size: 20px;  
+  font-size: 20px;
   padding: 5px;
 }
 
 .xl_ts_query {
   background-color: rgb(151, 127, 146);
 }
+
 .xl_ts_query textarea {
   background-color: rgb(212, 80, 184);
 }
@@ -64,6 +66,7 @@
 .xl_ts_result {
   background-color: rgb(53, 128, 214);
 }
+
 .xl_ts_result textarea {
   background-color: rgb(53, 128, 214);
 }
@@ -100,4 +103,29 @@
 .xl_ts_btn_container {
   flex: 2;
   background-color: darkturquoise;
+  text-align: center;
+}
+
+.xl_ts_btn {
+  /* -webkit-transition-duration: 0.4s; */
+  /* transition-duration: 0.4s; */
+  /* padding: 16px 32px; */
+  text-align: center;
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+  border-radius: 5px;
+  margin: 10px auto;
+  height: calc(100% - 10px * 2);
+  width: 300px;
+}
+
+.xl_ts_btn:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.xl_ts_btn:active {
+  background-color: #2f8b32;
+  color: white;
 }

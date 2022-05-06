@@ -111,9 +111,10 @@
   /* transition-duration: 0.4s; */
   /* padding: 16px 32px; */
   text-align: center;
-  background-color: white;
-  color: black;
-  border: 2px solid #4CAF50;
+  font-size: large;
+  background-color: #1890ff;
+  color: white;
+  border: 0px solid #1890ff;
   border-radius: 5px;
   margin: 10px auto;
   height: calc(100% - 10px * 2);
@@ -121,11 +122,11 @@
 }
 
 .xl_ts_btn:hover {
-  background-color: #4CAF50;
+  background-color: #41a9ff;
   color: white;
 }
 
 .xl_ts_btn:active {
-  background-color: #2f8b32;
+  background-color: #0a6dd9;
   color: white;
 }

@@ -87,8 +87,19 @@
     event.stopPropagation();
   });
 
+  //复制翻译结果到剪切板
   $(".xl_result_copy").on("click", () => {
     GM_setClipboard($('.xl_ts_result_input').val());
+  });
+
+  //切换翻译
+  $(".xl_ts_change").on("click", () => {
+    let from = $('.xl_ts_p_from').text();
+    let to = $('.xl_ts_p_to').text();
+    $('.xl_ts_p_from').text(to);
+    $('.xl_ts_p_to').text(from);
+    console.log('old: from=' + from + ' to=' + to);
+    console.log('new: from=' + to + ' to=' + from);
   });
 
   $(".xl_ts_btn").on("click", () => {
@@ -98,11 +109,17 @@
     let appsecret = 'kgLnrss5MVpucE8LOON1';
     let signBefore = appid + query + salt + appsecret;
     let sign = CryptoJS.MD5(signBefore).toString();
+    let toStr = $('.xl_ts_p_to').text();
+    let to = 'en';
+    if (toStr == "中文") {
+      to = 'zh';
+      console.log('哈哈哈');
+    }
     
     GM_xmlhttpRequest({
       method: "post",
       url: 'https://fanyi-api.baidu.com/api/trans/vip/translate',
-      data: 'q=' + query + '&from=zh&to=en&appid=' + appid + '&salt=' + salt + '&sign=' + sign,
+      data: 'q=' + query + '&from=auto&to=' + to + '&appid=' + appid + '&salt=' + salt + '&sign=' + sign,
       headers:  {
           "Content-Type": "application/x-www-form-urlencoded"
       },

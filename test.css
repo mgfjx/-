@@ -28,7 +28,7 @@
 
 .ts_logo_container {
   flex: 1;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
 }
 
 .ts_logo {
@@ -39,7 +39,7 @@
 .xl_input_container {
   /* height: 75%; */
   flex: 7;
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
 }
 
 .xl_input_item {
@@ -48,31 +48,54 @@
 }
 
 .xl_input_item textarea {
-  width: calc(100% - 5px * 2);
-  height: calc(100% - 5px * 2);
+  width: calc(100% - 20px * 2);
+  height: calc(100% - 10px * 2);
   border-width: 0;
-  font-size: 20px;
+  font-size: 18px;
   padding: 5px;
+  resize: none;
+  background-color: #f8f9fa;
 }
 
 .xl_ts_query {
-  background-color: rgb(151, 127, 146);
+  /* background-color: rgb(151, 127, 146); */
 }
 
 .xl_ts_query textarea {
-  background-color: rgb(212, 80, 184);
+  
 }
 
 .xl_ts_result {
-  background-color: rgb(53, 128, 214);
+  position: relative;
 }
 
 .xl_ts_result textarea {
-  background-color: rgb(53, 128, 214);
+
+}
+
+.xl_result_copy {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+}
+
+.xl_result_copy svg {
+  height: 100%;
+}
+
+.xl_result_copy:hover {
+  background-color: #d8d8d8;
+}
+
+.xl_result_copy:active {
+  background-color: #bfbfbf;
 }
 
 .xl_ts_indicator {
-  background-color: aqua;
+  /* background-color: aqua; */
   width: 100%;
   flex: 1;
   display: table-cell;
@@ -80,7 +103,7 @@
 }
 
 .xl_ts_indicator_container {
-  background-color: azure;
+  /* background-color: azure; */
   width: 100%;
   height: 100%;
   display: flex;
@@ -88,21 +111,45 @@
 
 .xl_ts_indicator_container div {
   display: inline;
-  flex: 1;
-  background-color: rgb(122, 181, 239);
+  /* background-color: rgb(122, 181, 239); */
+  display: flex;
 }
 
 .xl_ts_indicator_container :first-child {
-  text-align: right;
+  flex: 2;
 }
 
 .xl_ts_indicator_container :last-child {
+  flex: 2;
+}
+
+.xl_ts_p {
+  margin: auto;
+}
+
+.xl_ts_p_from {
+  text-align: right;
+}
+
+.xl_ts_p_to {
   text-align: left;
+}
+
+.xl_ts_change {
+  flex: 1;
+}
+
+.xl_ts_change svg:active {
+  background-color: #f8f9fa;
+}
+
+.xl_ts_change:hover {
+  cursor: pointer;
 }
 
 .xl_ts_btn_container {
   flex: 2;
-  background-color: darkturquoise;
+  /* background-color: darkturquoise; */
   text-align: center;
 }
 

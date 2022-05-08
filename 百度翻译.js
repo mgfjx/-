@@ -7,8 +7,11 @@
 // @include      https://www.baidu.com/
 // @match
 // @require      http://code.jquery.com/jquery-1.11.0.min.js
+// @require      https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js
 // @grant        GM_addStyle
 // @grant        GM_getResourceURL
+// @grant        GM_xmlhttpRequest
+// @grant        GM_setClipboard
 
 // ==/UserScript==
 
@@ -84,9 +87,48 @@
     event.stopPropagation();
   });
 
+  $(".xl_result_copy").on("click", () => {
+    GM_setClipboard($('.xl_ts_result_input').val());
+  });
+
   $(".xl_ts_btn").on("click", () => {
-    let inputStr = $('.xl_ts_query_input').val();
-    alert(inputStr);
+    let query = $('.xl_ts_query_input').val();
+    let appid = '20220505001203855';
+    let salt = '1231231';
+    let appsecret = 'kgLnrss5MVpucE8LOON1';
+    let signBefore = appid + query + salt + appsecret;
+    let sign = CryptoJS.MD5(signBefore).toString();
+    
+    GM_xmlhttpRequest({
+      method: "post",
+      url: 'https://fanyi-api.baidu.com/api/trans/vip/translate',
+      data: 'q=' + query + '&from=zh&to=en&appid=' + appid + '&salt=' + salt + '&sign=' + sign,
+      headers:  {
+          "Content-Type": "application/x-www-form-urlencoded"
+      },
+      onload: function(res){
+          if(res.status === 200){
+              console.log('成功')
+              console.log(res.response);
+              let response = JSON.parse(res.response);
+              let trans_result = response["trans_result"];
+              if (!trans_result || trans_result.length == 0) {
+                $('.xl_ts_result_input').val(res);
+              } else {
+                let firstItem = trans_result[0];
+                $('.xl_ts_result_input').val(firstItem.dst);
+                console.log('result: ', firstItem);
+              }
+          }else{
+              console.log('失败')
+              console.log(res)
+          }
+      },
+      onerror : function(err){
+          console.log('error')
+          console.log(err)
+      }
+    });
   });
 
   GM_addStyle(`

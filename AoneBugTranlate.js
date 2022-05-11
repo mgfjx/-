@@ -6,6 +6,7 @@
 // @author       You
 // @include      
 // @match        https://work.aone.alibaba-inc.com/issue/*
+// @match        https://aone.alibaba-inc.com/v2/bug/*
 // @match        https://aone.alibaba-inc.com/v2/project/*/bug/*
 // @require      http://code.jquery.com/jquery-1.11.0.min.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js
@@ -21,18 +22,21 @@
 
     console.log("AoneBug翻译油猴...");
 
+    window.keyCodeObj = {keyCode: 0, time: (new Date()).valueOf()};
     document.onkeydown = function (event) {
         var e = event || window.event || arguments.callee.caller.arguments[0];
-        console.log("keyCode: " + e.keyCode);
-        if (e && event.ctrlKey && e.keyCode == 18) {
+        if (!e) {
+            return;
+        }
+        let keyCode = e.keyCode;
+        let currentTime = (new Date()).valueOf();
+        let changeTime = (currentTime - window.keyCodeObj.time);
+        if (keyCode == 17 && keyCode == window.keyCodeObj.keyCode && changeTime <= 300 && changeTime > 100) { //快速双击ctrl键
+            console.log("keyCode: " + e.keyCode);
             showHideTranslatePage();
         }
-
-        if (e && e.keyCode == 13) {
-            translateBtnClicked();
-            event.stopPropagation();
-        }
-
+        window.keyCodeObj.keyCode = keyCode;
+        window.keyCodeObj.time = currentTime;
     };
 
     $("body").append(`
@@ -151,12 +155,15 @@
     }
 
     //点击背景隐藏翻译框
-    $(".xl_ab_bg").on("click", () => {
+    $(".xl_ab_bg").mousedown(() => {
         showHideTranslatePage();
     });
 
     //防止事件传递
     $(".xl_ab_container").on("click", () => {
+        event.stopPropagation();
+    });
+    $(".xl_ab_container").mousedown(() => {
         event.stopPropagation();
     });
 

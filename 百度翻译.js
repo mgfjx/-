@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  百度翻译脚本
 // @author       You
-// @include      https://www.baidu.com/
+// @include      *
 // @match
 // @require      http://code.jquery.com/jquery-1.11.0.min.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js
@@ -23,9 +23,15 @@
   document.onkeydown = function (event) {
     var e = event || window.event || arguments.callee.caller.arguments[0];
     console.log("keyCode: " + e.keyCode);
-    if (e  && event.ctrlKey && e.keyCode == 84) {
+    if (e  && event.ctrlKey && e.keyCode == 18) {
       showHideTranslatePage();
     }
+
+    if (e && e.keyCode == 13) {
+      translateBtnClicked();
+      event.stopPropagation();
+    }
+
   };
 
   $("body").append(`
@@ -66,6 +72,7 @@
 
   //判断是否隐藏翻译框
   function showHideTranslatePage () {
+      console.log("执行showHideTranslatePage方法");
     let display = $(".xl_ts_bg").css("display");
     if (display == "none") {
       $(".xl_ts_bg").css("display", "block");
@@ -102,7 +109,7 @@
     console.log('new: from=' + to + ' to=' + from);
   });
 
-  $(".xl_ts_btn").on("click", () => {
+  function translateBtnClicked() {
     let query = $('.xl_ts_query_input').val();
     let appid = '20220505001203855';
     let salt = '1231231';
@@ -115,7 +122,7 @@
       to = 'zh';
       console.log('哈哈哈');
     }
-    
+
     GM_xmlhttpRequest({
       method: "post",
       url: 'https://fanyi-api.baidu.com/api/trans/vip/translate',
@@ -146,6 +153,11 @@
           console.log(err)
       }
     });
+  }
+
+  $(".xl_ts_btn").on("click", () => {
+    translateBtnClicked();
+      event.stopPropagation();
   });
 
   GM_addStyle(`
@@ -159,7 +171,7 @@
       z-index: 10000;
       display: none;
     }
-    
+
     .xl_ts_container {
       text-align: center;
       /*让div内部文字居中*/
@@ -177,28 +189,28 @@
       display: flex;
       flex-direction: column;
     }
-    
+
     .ts_logo_container {
       flex: 1;
       /* background-color: aquamarine; */
     }
-    
+
     .ts_logo {
       height: 31px;
       margin-top: 3px;
     }
-    
+
     .xl_input_container {
       /* height: 75%; */
       flex: 7;
       /* background-color: blueviolet; */
     }
-    
+
     .xl_input_item {
       height: calc(50%);
       width: calc(100%);
     }
-    
+
     .xl_input_item textarea {
       width: calc(100% - 20px * 2);
       height: calc(100% - 10px * 2);
@@ -208,23 +220,23 @@
       resize: none;
       background-color: #f8f9fa;
     }
-    
+
     .xl_ts_query {
       /* background-color: rgb(151, 127, 146); */
     }
-    
+
     .xl_ts_query textarea {
-      
+
     }
-    
+
     .xl_ts_result {
       position: relative;
     }
-    
+
     .xl_ts_result textarea {
-    
+
     }
-    
+
     .xl_result_copy {
       position: absolute;
       right: 20px;
@@ -233,19 +245,19 @@
       height: 32px;
       border-radius: 16px;
     }
-    
+
     .xl_result_copy svg {
       height: 100%;
     }
-    
+
     .xl_result_copy:hover {
       background-color: #d8d8d8;
     }
-    
+
     .xl_result_copy:active {
       background-color: #bfbfbf;
     }
-    
+
     .xl_ts_indicator {
       /* background-color: aqua; */
       width: 100%;
@@ -253,58 +265,58 @@
       display: table-cell;
       vertical-align: middle;
     }
-    
+
     .xl_ts_indicator_container {
       /* background-color: azure; */
       width: 100%;
       height: 100%;
       display: flex;
     }
-    
+
     .xl_ts_indicator_container div {
       display: inline;
       /* background-color: rgb(122, 181, 239); */
       display: flex;
     }
-    
+
     .xl_ts_indicator_container :first-child {
       flex: 2;
     }
-    
+
     .xl_ts_indicator_container :last-child {
       flex: 2;
     }
-    
+
     .xl_ts_p {
       margin: auto;
     }
-    
+
     .xl_ts_p_from {
       text-align: right;
     }
-    
+
     .xl_ts_p_to {
       text-align: left;
     }
-    
+
     .xl_ts_change {
       flex: 1;
     }
-    
+
     .xl_ts_change svg:active {
       background-color: #f8f9fa;
     }
-    
+
     .xl_ts_change:hover {
       cursor: pointer;
     }
-    
+
     .xl_ts_btn_container {
       flex: 2;
       /* background-color: darkturquoise; */
       text-align: center;
     }
-    
+
     .xl_ts_btn {
       /* -webkit-transition-duration: 0.4s; */
       /* transition-duration: 0.4s; */
@@ -319,12 +331,12 @@
       height: calc(100% - 10px * 2);
       width: 300px;
     }
-    
+
     .xl_ts_btn:hover {
       background-color: #41a9ff;
       color: white;
     }
-    
+
     .xl_ts_btn:active {
       background-color: #0a6dd9;
       color: white;

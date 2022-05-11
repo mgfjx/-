@@ -90,6 +90,8 @@
     </div>
     `);
 
+    window.inputtime = 0;
+
     //判断是否隐藏翻译框
     function showHideTranslatePage() {
         console.log("执行showHideTranslatePage方法");
@@ -99,6 +101,7 @@
             console.log('bugIdTitle: ' + bugIdTitle);
             if (bugIdTitle.length <= 'BugID:'.length) { //说明翻译页面未打开过，需要再设置默认值
                 let title = $('.detail-content .next-card-title div span').text();
+                console.log('title: ' + title);
                 if (title && title.length > 0) {
                     $('.xl_ab_itemContainer_1 .xl_ab_query').val(title);
                     translateText(title, (resultText) => {
@@ -158,17 +161,41 @@
         $('.xl_ab_itemContainer .xl_result_textarea').val(result);
     }
 
+    $(".xl_ab_query").on("input propertychange", function () {
+        var $this = $(this);
+        let input = $this.val();
+        window.inputtime = (new Date()).valueOf();
+        if (window.interval) {
+            clearInterval(window.interval);
+            window.interval = undefined;
+        }
+        window.interval = setInterval(() => {
+            let curremttime = (new Date()).valueOf();
+            if (curremttime - window.inputtime > 1000) {
+                console.log("curremttime: " + curremttime + ', window.inputtime: ' + window.inputtime);
+                clearInterval(window.interval);
+                window.interval = undefined;
+                translateText(input, (resultText) => {
+                    $(this).parent().find('.xl_ab_result').val(resultText);
+                    updateResult();
+                });
+            }
+        }, 200);
+    });
+
+    //翻译文本
     function translateText(query, callback) {
+        if (!query || query.length == 0) {
+            console.log("翻译文本为空");
+            return;
+        }
+        console.log('开始翻译：' + query);
         let appid = '20220505001203855';
         let salt = '1231231';
         let appsecret = 'kgLnrss5MVpucE8LOON1';
         let signBefore = appid + query + salt + appsecret;
         let sign = CryptoJS.MD5(signBefore).toString();
-        let toStr = $('.xl_ts_p_to').text();
         let to = 'en';
-        if (toStr == "中文") {
-            to = 'zh';
-        }
 
         GM_xmlhttpRequest({
             method: "post",
@@ -211,6 +238,7 @@
         bottom: 0;
         background-color: rgb(0, 0, 0, 0.8);
         z-index: 10000;
+        display: none;
       }
       
       .xl_ab_container {

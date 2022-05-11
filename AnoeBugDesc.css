@@ -1,0 +1,57 @@
+.xl_ab_bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0, 0.8);
+  z-index: 10000;
+}
+
+.xl_ab_container {
+  /* text-align: center; */
+  /*让div内部文字居中*/
+  background-color: #fff;
+  border-radius: 20px;
+  width: 800px;
+  height: 300px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 0;  
+  font-size: 14px;
+}
+
+.xl_ab_itemContainer {
+  background-color: antiquewhite;
+  padding-left: 20px;
+  /* border-radius: 8px; */
+  position: relative;
+}
+
+.xl_ab_itemContainer p {
+  margin: 0;
+}
+
+.xl_ab_itemContainer textarea {
+  width: calc(100% - 40px * 2);
+  height: 45px;
+  border-width: 0;
+  /* font-size: 16px; */
+  padding: 5px;
+  resize: none;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.xl_ab_translate {
+  position: absolute;
+  right: 20px;
+  bottom: 36px;
+}

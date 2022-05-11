@@ -92,29 +92,33 @@
 
     window.inputtime = 0;
 
+    function initData() {
+        let bugIdTitle = $('.xl_ab_itemContainer_1 p').text();
+        console.log('bugIdTitle: ' + bugIdTitle);
+        if (bugIdTitle.length <= 'BugID:'.length) { //说明翻译页面未打开过，需要再设置默认值
+            let title = $('.detail-content .next-card-title div span').text();
+            console.log('title: ' + title);
+            if (title && title.length > 0) {
+                $('.xl_ab_itemContainer_1 .xl_ab_query').val(title);
+                translateText(title, (resultText) => {
+                    $('.xl_ab_itemContainer_1').find('.xl_ab_result').val(resultText);
+                    updateResult();
+                });
+            }
+            let budId = $('.detail-basic-id').text();
+            if (budId && budId.length > 0) {
+                $('.xl_ab_itemContainer_1 p').text('BugID:' + budId);
+            }
+            $('.xl_ab_itemContainer_4').find('textarea').val('Test at latest version.');
+        }
+    }
+
     //判断是否隐藏翻译框
     function showHideTranslatePage() {
         console.log("执行showHideTranslatePage方法");
         let display = $(".xl_ab_bg").css("display");
         if (display == "none") {
-            let bugIdTitle = $('.xl_ab_itemContainer_1 p').text();
-            console.log('bugIdTitle: ' + bugIdTitle);
-            if (bugIdTitle.length <= 'BugID:'.length) { //说明翻译页面未打开过，需要再设置默认值
-                let title = $('.detail-content .next-card-title div span').text();
-                console.log('title: ' + title);
-                if (title && title.length > 0) {
-                    $('.xl_ab_itemContainer_1 .xl_ab_query').val(title);
-                    translateText(title, (resultText) => {
-                        $('.xl_ab_itemContainer_1').find('.xl_ab_result').val(resultText);
-                        updateResult();
-                    });
-                }
-                let budId = $('.detail-basic-id').text();
-                if (budId && budId.length > 0) {
-                    $('.xl_ab_itemContainer_1 p').text('BugID:' + budId);
-                }
-                $('.xl_ab_itemContainer_4').find('textarea').val('Test at latest version.');
-            }
+            initData();
             $(".xl_ab_bg").css("display", "block");
         } else {
             $(".xl_ab_bg").css({ display: "none" });

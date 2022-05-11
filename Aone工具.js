@@ -47,8 +47,8 @@
     //记录父元素
     let parent = $('.detail-content .next-card-title div').parent();
     let title = $('.detail-content .next-card-title div span').text();
-    $('.detail-content  .next-card-title div').remove();
-    $(parent).html('<span class="xxl_btn detail-title" title="单击复制标题" style="word-break: break-all;"></span>');
+    $('.detail-content  .next-card-title div').css('display', 'none');
+    $(parent).prepend('<span class="xxl_btn detail-title" title="单击复制标题" style="word-break: break-all;"></span>');
     $('.xxl_btn').text(title);
     $(".xxl_btn").css({
       fontSize: 24

@@ -13,9 +13,9 @@
   /*让div内部文字居中*/
   background-color: #fff;
   border-radius: 20px;
-  width: 800px;
-  height: 300px;
-  margin: auto;
+  /* width: 800px; */
+  /* height: 600px; */
+  margin: 60px 200px;
   position: absolute;
   top: 0;
   left: 0;
@@ -29,18 +29,19 @@
 }
 
 .xl_ab_itemContainer {
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
   padding-left: 20px;
+  /* padding-top: 15px; */
   /* border-radius: 8px; */
   position: relative;
 }
 
 .xl_ab_itemContainer p {
-  margin: 0;
+  margin: 8px 0;
 }
 
 .xl_ab_itemContainer textarea {
-  width: calc(100% - 40px * 2);
+  width: calc(50% - 20px * 2);
   height: 45px;
   border-width: 0;
   /* font-size: 16px; */
@@ -50,8 +51,31 @@
   border-radius: 8px;
 }
 
+.xl_ab_container textarea {
+  border-width: 1px;
+  border-color:gainsboro;
+}
+
 .xl_ab_translate {
   position: absolute;
-  right: 20px;
-  bottom: 36px;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+}
+
+.xl_result_container {
+  padding-top: 50px;
+  position: relative;
+}
+
+.xl_result_container textarea {
+  width: calc(100% - 33px * 2);
+  height: 100px;
+}
+
+.xl_ab_translate_5 {
+  bottom: 40px;
+  right: 15px;
+  position: absolute;
+  cursor: pointer;
 }

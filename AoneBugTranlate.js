@@ -6,6 +6,7 @@
 // @author       You
 // @include      
 // @match        https://work.aone.alibaba-inc.com/issue/*
+// @match        https://aone.alibaba-inc.com/v2/project/*/bug/*
 // @require      http://code.jquery.com/jquery-1.11.0.min.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js
 // @grant        GM_addStyle
@@ -93,23 +94,47 @@
     window.inputtime = 0;
 
     function initData() {
-        let bugIdTitle = $('.xl_ab_itemContainer_1 p').text();
-        console.log('bugIdTitle: ' + bugIdTitle);
-        if (bugIdTitle.length <= 'BugID:'.length) { //说明翻译页面未打开过，需要再设置默认值
-            let title = $('.detail-content .next-card-title div span').text();
-            console.log('title: ' + title);
-            if (title && title.length > 0) {
-                $('.xl_ab_itemContainer_1 .xl_ab_query').val(title);
-                translateText(title, (resultText) => {
-                    $('.xl_ab_itemContainer_1').find('.xl_ab_result').val(resultText);
-                    updateResult();
-                });
+        let url = window.location.href;
+        console.log('url: ' + url);
+        let res = url.indexOf('https://aone.alibaba-inc.com/v2');
+        //新版Aone
+        if (res == 0) {
+            let bugIdTitle = $('.xl_ab_itemContainer_1 p').text();
+            if (bugIdTitle.length <= 'BugID:'.length) { //说明翻译页面未打开过，需要再设置默认值
+                let title = $('.workItemTitle--workitemTextInput--2V6YDlV').val();
+                console.log('title: ' + title);
+                if (title && title.length > 0) {
+                    $('.xl_ab_itemContainer_1 .xl_ab_query').val(title);
+                    translateText(title, (resultText) => {
+                        $('.xl_ab_itemContainer_1').find('.xl_ab_result').val(resultText);
+                        updateResult();
+                    });
+                }
+                let budId = $($('.AttributeFormat--displayText--1Banb6j')[0]).text();
+                if (budId && budId.length > 0) {
+                    $('.xl_ab_itemContainer_1 p').text('BugID:' + budId);
+                }
+                $('.xl_ab_itemContainer_4').find('textarea').val('Test at latest version.');
             }
-            let budId = $('.detail-basic-id').text();
-            if (budId && budId.length > 0) {
-                $('.xl_ab_itemContainer_1 p').text('BugID:' + budId);
+        } else { //旧版Anoe
+            let bugIdTitle = $('.xl_ab_itemContainer_1 p').text();
+            console.log('bugIdTitle: ' + bugIdTitle);
+            if (bugIdTitle.length <= 'BugID:'.length) { //说明翻译页面未打开过，需要再设置默认值
+                let title = $('.detail-content .next-card-title div span').text();
+                console.log('title: ' + title);
+                if (title && title.length > 0) {
+                    $('.xl_ab_itemContainer_1 .xl_ab_query').val(title);
+                    translateText(title, (resultText) => {
+                        $('.xl_ab_itemContainer_1').find('.xl_ab_result').val(resultText);
+                        updateResult();
+                    });
+                }
+                let budId = $('.detail-basic-id').text();
+                if (budId && budId.length > 0) {
+                    $('.xl_ab_itemContainer_1 p').text('BugID:' + budId);
+                }
+                $('.xl_ab_itemContainer_4').find('textarea').val('Test at latest version.');
             }
-            $('.xl_ab_itemContainer_4').find('textarea').val('Test at latest version.');
         }
     }
 

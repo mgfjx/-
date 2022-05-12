@@ -84,8 +84,13 @@
   width: 20px;
   height: 20px;
   position: absolute;
+  display: none;
+}
+
+.xl_ab_loading_animate {
   animation:rotating 1.2s linear infinite;
   -webkit-animation: rotating 1.2s linear infinite;
+  display: block;
 }
 
 @keyframes rotating{

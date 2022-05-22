@@ -97,6 +97,10 @@
     padding: 5px;
 }
 
+.xl_result_comment textarea {
+    height: 300px;
+}
+
 .xl_ab_translate_5 {
     bottom: 8px;
     right: 20px;
@@ -110,7 +114,7 @@
     width: 20px;
     height: 20px;
     position: absolute;
-    /* display: none; */
+    display: none;
 }
 
 .xl_ab_loading_animate {

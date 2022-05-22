@@ -9,26 +9,6 @@
     /* display: none; */
 }
 
-/* ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-} */
-
-::-webkit-scrollbar-thumb {
-    height: 30px;
-    background-color: #999;
-    -webkit-border-radius: 7px;
-    outline: 2px solid #fff;
-    outline-offset: -2px;
-    border: 2px solid #fff;
-}
-
-
-::-webkit-scrollbar-track-piece {
-    background-color: #c92828;
-    -webkit-border-radius: 3px;
-}
-
 .xl_ab_container_bg {
     background-color: #fff;
     border-radius: 10px;
@@ -53,7 +33,7 @@
 
 .xl_ab_itemContainer {
     /* position: relative; */
-    background-color: rgb(127, 204, 255);
+    /* background-color: rgb(127, 204, 255); */
 }
 
 .xl_ab_itemContainer p {
@@ -65,7 +45,7 @@
     float: left;
     /* text-align: center; */
     display: flex;
-    background-color: rgb(192, 192, 227);
+    /* background-color: rgb(192, 192, 227); */
 }
 
 .xl_ab_textContainer div {
@@ -73,12 +53,12 @@
 }
 
 .xl_ab_text_first {
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     flex: 1;
 }
 
 .xl_ab_text_second {
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     flex: 1;
 }
 
@@ -86,7 +66,7 @@
     border:none;
     /* outline: none; */
     resize: none;
-    background:#05E02E;
+    /* background:#05E02E; */
     appearance:none;
     width: calc(100% - 16px * 2);
     margin: 1px 10px;

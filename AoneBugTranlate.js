@@ -14,6 +14,8 @@
 // @grant        GM_getResourceURL
 // @grant        GM_xmlhttpRequest
 // @grant        GM_setClipboard
+// @grant        GM_setValue
+// @grant        GM_getValue
 
 // ==/UserScript==
 
@@ -159,6 +161,34 @@
   </div>
   `);
 
+  //本地缓存处理
+  function checkCacheData() {
+    //查找本地缓存
+    let saveObj = GM_getValue("GAone", {});
+    let savedNums = Object.getOwnPropertyNames(saveObj).length;
+    console.log("savedObjs: ", savedNums);
+    //大于50个时做清理操作，清理一个月以上的数据
+    if (savedNums > 50) {
+      let newSaveObj = {};
+      let currentTime = new Date().valueOf();
+      Object.keys(saveObj).forEach(function(key){
+        let item = saveObj[key];
+        let time = item.time;
+        if (item && time) {
+          let msCount = currentTime - time;
+          //去掉超过一个月的bug数据
+          if (msCount < 30 * 24 * 60 * 60 * 1000) {
+            newSaveObj[key] = item;
+          } else {
+            console.log(`delete ${key}, ${item.queryTitle}`);
+          }
+        }
+      });
+      GM_setValue("GAone", newSaveObj);
+    }
+  }
+  checkCacheData();
+
   window.inputtime = 0;
 
   function initData() {
@@ -170,22 +200,29 @@
       let bugIdTitle = $(".xl_ab_itemContainer_1 p").text();
       if (bugIdTitle.length <= "BugID:".length) {
         //说明翻译页面未打开过，需要再设置默认值
-        let title = $(".workItemTitle--workitemTextInput--2V6YDlV").val();
-        console.log("title: " + title);
-        if (title && title.length > 0) {
-          $(".xl_ab_itemContainer_1 .xl_ab_query").val(title);
-          translateText(title, (resultText) => {
-            $(".xl_ab_itemContainer_1").find(".xl_ab_result").val(resultText);
-            updateResult();
-          });
+        let bugId = $($(".AttributeFormat--displayText--1Banb6j")[0]).text();
+        if (!bugId || bugId.length == 0) {
+          console.log('bug id 为空!');
+          return;
         }
-        let budId = $($(".AttributeFormat--displayText--1Banb6j")[0]).text();
-        if (budId && budId.length > 0) {
-          $(".xl_ab_itemContainer_1 p").text("BugID:" + budId);
+        //查找本地缓存
+        let saveObj = GM_getValue("GAone", {});
+        let currentObj = saveObj[bugId];
+        $(".xl_ab_itemContainer_1 p").text("BugID:" + bugId);
+        if (!currentObj) {
+          $(".xl_ab_itemContainer_4").find("textarea").val("Test at latest version."); 
+          let title = $(".workItemTitle--workitemTextInput--2V6YDlV").val();
+          console.log("title: " + title);
+          if (title && title.length > 0) {
+            $(".xl_ab_itemContainer_1 .xl_ab_query").val(title);
+            translateText(title, (resultText) => {
+              $(".xl_ab_itemContainer_1").find(".xl_ab_result").val(resultText);
+              updateResult();
+            });
+          }
+        } else {
+          fillInputsByObj(currentObj);
         }
-        $(".xl_ab_itemContainer_4")
-          .find("textarea")
-          .val("Test at latest version.");
       }
     } else {
       //旧版Anoe
@@ -193,24 +230,44 @@
       console.log("bugIdTitle: " + bugIdTitle);
       if (bugIdTitle.length <= "BugID:".length) {
         //说明翻译页面未打开过，需要再设置默认值
-        let title = $(".detail-content .next-card-title div span").text();
-        console.log("title: " + title);
-        if (title && title.length > 0) {
-          $(".xl_ab_itemContainer_1 .xl_ab_query").val(title);
-          translateText(title, (resultText) => {
-            $(".xl_ab_itemContainer_1").find(".xl_ab_result").val(resultText);
-            updateResult();
-          });
+        let bugId = $(".detail-basic-id").text();
+        if (!bugId || bugId.length == 0) {
+          console.log('bug id 为空!');
+          return;
         }
-        let budId = $(".detail-basic-id").text();
-        if (budId && budId.length > 0) {
-          $(".xl_ab_itemContainer_1 p").text("BugID:" + budId);
+        //查找本地缓存
+        let saveObj = GM_getValue("GAone", {});
+        let currentObj = saveObj[bugId];
+        $(".xl_ab_itemContainer_1 p").text("BugID:" + bugId);
+        if (!currentObj) {
+          $(".xl_ab_itemContainer_4").find("textarea").val("Test at latest version."); 
+          let title = $(".detail-content .next-card-title div span").text();
+          console.log("title: " + title);
+          if (title && title.length > 0) {
+            $(".xl_ab_itemContainer_1 .xl_ab_query").val(title);
+            translateText(title, (resultText) => {
+              $(".xl_ab_itemContainer_1").find(".xl_ab_result").val(resultText);
+              updateResult();
+            });
+          }
+        } else {
+          fillInputsByObj(currentObj);
         }
-        $(".xl_ab_itemContainer_4")
-          .find("textarea")
-          .val("Test at latest version.");
       }
     }
+  }
+
+  function fillInputsByObj(obj) {
+    $(".xl_ab_itemContainer_1 .xl_ab_query").val(obj.queryTitle);
+    $(".xl_ab_itemContainer_1 .xl_ab_result").val(obj.translateTitle);
+    $(".xl_ab_itemContainer_2 .xl_ab_query").val(obj.queryRootCause);
+    $(".xl_ab_itemContainer_2 .xl_ab_result").val(obj.translateRootCause);
+    $(".xl_ab_itemContainer_3 .xl_ab_query").val(obj.querySolution);
+    $(".xl_ab_itemContainer_3 .xl_ab_result").val(obj.translateSolution);
+    $(".xl_ab_itemContainer_4 .xl_ab_query").val(obj.querySuggestion);
+    $(".xl_ab_itemContainer_4 .xl_ab_result").val(obj.translateSuggestion);
+    updateResult();
+    console.log('fillDefaultValue', obj);
   }
 
   //判断是否隐藏翻译框
@@ -263,6 +320,7 @@
   $(".xl_ab_translate_5").mousedown(function () {
     $(this).find("path").attr("fill", "#ff0000");
   });
+
   //复制翻译结果到剪切板
   $(".xl_ab_translate_5").mouseup(function () {
     $(this).find("path").attr("fill", "#bfbfbf");
@@ -270,17 +328,54 @@
     console.log('result: ', result);
     GM_setClipboard(result);
   });
+
+  //保存当前数据到本地
+  function saveCurrentDataToLocal() {
+    let bugId = $('.detail-basic-id').text();
+    //标题
+    let queryTitle = $('.xl_ab_itemContainer_1 .xl_ab_query').val();
+    let translateTitle = $('.xl_ab_itemContainer_1 .xl_ab_result').val();
+    //根因
+    let queryRootCause = $('.xl_ab_itemContainer_2 .xl_ab_query').val();
+    let translateRootCause = $('.xl_ab_itemContainer_2 .xl_ab_result').val();
+    //解决办法
+    let querySolution = $('.xl_ab_itemContainer_3 .xl_ab_query').val();
+    let translateSolution = $('.xl_ab_itemContainer_3 .xl_ab_result').val();
+    //测试建议
+    let querySuggestion = $('.xl_ab_itemContainer_4 .xl_ab_query').val();
+    let translateSuggestion = $('.xl_ab_itemContainer_4 .xl_ab_result').val();
+
+    var obj = {
+      bugId: bugId,
+      queryTitle: queryTitle,
+      translateTitle: translateTitle,
+      queryRootCause: queryRootCause,
+      translateRootCause: translateRootCause,
+      querySolution: querySolution,
+      translateSolution: translateSolution,
+      querySuggestion: querySuggestion,
+      translateSuggestion: translateSuggestion,
+      time: new Date().valueOf()
+    };
+    let saveObj = GM_getValue("GAone", {});
+    saveObj[bugId] = obj;
+    GM_setValue("GAone", saveObj);
+    console.log('saveObj: ', saveObj);
+  }
+
   //更新结果
   function updateResult() {
-    let budId = $('.detail-basic-id').text();
-    let title = 'BugID:' + budId + ': ' + $('.xl_ab_itemContainer_1 .xl_ab_result').val();
+
+    saveCurrentDataToLocal();
+
+    let bugId = $('.detail-basic-id').text();
+    let title = 'BugID:' + bugId + ': ' + $('.xl_ab_itemContainer_1 .xl_ab_result').val();
     let rootCause = "Root Cause: " + $('.xl_ab_itemContainer_2 .xl_ab_result').val();
     let solution = "Solution: " + $('.xl_ab_itemContainer_3 .xl_ab_result').val();
     let testSuggestion = "Test Suggestion: " + $('.xl_ab_itemContainer_4 .xl_ab_result').val();
     let result = `${title}\n\n${rootCause}\n${solution}\n${testSuggestion}`;
 
     $('.xl_result_commit .xl_result_textarea').val(result);
-
 
     let rootCaseZh = '•根因分析：' + $('.xl_ab_itemContainer_2 .xl_ab_query').val();
     let solutionZh = '•修改方案：' + $('.xl_ab_itemContainer_3 .xl_ab_query').val();

@@ -66,9 +66,25 @@
       GM_setClipboard(title);
     });
 
-    //获取当前鼠标位置
+    //添加复制按钮
+    addCopyButton();
 
   }, 200);
+
+  function addCopyButton() {
+    let rightToolbar = $('.toolbar-section-right');
+    let btn = '<div class="toolbar-section-item"><div class="xxl_copy_btn next-btn next-btn-primary next-btn-medium"><span>复制BugId&amp;标题</span></div></div>';
+    $(btn).prependTo(rightToolbar);
+    // $('.xxl_copy_btn').text(title);
+    $(".xxl_copy_btn").on("click", function (e) {
+      console.log("x: " + e.pageX + ", y: " + e.pageY);
+      let title = $('.detail-content .next-card-title div span').text();
+      let bugId = $('.detail-basic-id').text();
+      let cpStr = bugId + ' - ' + title;
+      addIndicator(`您已复制[${cpStr}]内容!`);
+      GM_setClipboard(cpStr);
+    });
+  }
 
   GM_addStyle(`
     .next-tabs-content,

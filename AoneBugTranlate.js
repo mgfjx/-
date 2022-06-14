@@ -210,7 +210,7 @@
         let currentObj = saveObj[bugId];
         $(".xl_ab_itemContainer_1 p").text("BugID:" + bugId);
         if (!currentObj) {
-          $(".xl_ab_itemContainer_4").find("textarea").val("Test at latest version."); 
+          $(".xl_ab_itemContainer_4").find("textarea").val("Test at latest version.");
           let title = $(".workItemTitle--workitemTextInput--2V6YDlV").val();
           console.log("title: " + title);
           if (title && title.length > 0) {
@@ -240,7 +240,7 @@
         let currentObj = saveObj[bugId];
         $(".xl_ab_itemContainer_1 p").text("BugID:" + bugId);
         if (!currentObj) {
-          $(".xl_ab_itemContainer_4").find("textarea").val("Test at latest version."); 
+          $(".xl_ab_itemContainer_4").find("textarea").val("Test at latest version.");
           let title = $(".detail-content .next-card-title div span").text();
           console.log("title: " + title);
           if (title && title.length > 0) {
@@ -387,7 +387,8 @@
 预期结果：同bug预期
 测试结果：与预期一致.
 •自测试报告: 用例是否通过(Y/N): Y
-•影响范围 : 关联分支是否需要挑单(Y/N): N
+•影响范围: 无
+•关联分支是否需要挑单(Y/N):N
 •Bug影响的模块内相关功能P0 case自测结果：通过
 •Bug影响的其他模块相关功能P0 case自测结果：通过
 `;

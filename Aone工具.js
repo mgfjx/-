@@ -5,6 +5,8 @@
 // @description  Aone工具
 // @author       You
 // @match        https://work.aone.alibaba-inc.com/issue/*
+// @match        https://aone.alibaba-inc.com/v2/bug/*
+// @match        https://aone.alibaba-inc.com/v2/project/*/bug/*
 // @match        https://aone.alibaba-inc.com
 // @match        https://yuque.antfin-inc.com/*
 // @match        https://aone.alibaba-inc.com/project/1147545/issue*
@@ -44,46 +46,80 @@
   }
 
   setTimeout(() => {
-    //记录父元素
-    let parent = $('.detail-content .next-card-title div').parent();
-    let title = $('.detail-content .next-card-title div span').text();
-    $('.detail-content  .next-card-title div').css('display', 'none');
-    $(parent).prepend('<span class="xxl_btn detail-title" title="单击复制标题" style="word-break: break-all;"></span>');
-    $('.xxl_btn').text(title);
-    $(".xxl_btn").css({
-      fontSize: 24
-    });
-    $(".xxl_btn").on("click", function (e) {
-      console.log("x: " + e.pageX + ", y: " + e.pageY);
-      let title = $('.xxl_btn').text();
-      addIndicator("您已复制标题内容!");
-      GM_setClipboard(title);
-    });
-    $(".detail-basic-id").on("click", function (e) {
-      console.log("x: " + e.pageX + ", y: " + e.pageY);
-      let title = $('.detail-basic-id').text();
-      addIndicator("您已复制BugId !");
-      GM_setClipboard(title);
-    });
-
+    addTitleBugIdClickedEvent();
     //添加复制按钮
     addCopyButton();
 
   }, 200);
 
-  function addCopyButton() {
-    let rightToolbar = $('.toolbar-section-right');
-    let btn = '<div class="toolbar-section-item"><div class="xxl_copy_btn next-btn next-btn-primary next-btn-medium"><span>复制BugId&amp;标题</span></div></div>';
-    $(btn).prependTo(rightToolbar);
-    // $('.xxl_copy_btn').text(title);
-    $(".xxl_copy_btn").on("click", function (e) {
-      console.log("x: " + e.pageX + ", y: " + e.pageY);
+  function addTitleBugIdClickedEvent() {
+    let url = window.location.href;
+    console.log("url: " + url);
+    let res = url.indexOf("https://aone.alibaba-inc.com/v2");
+    //新版Aone
+    if (res == 0) {
+
+    } else {
+      //记录父元素
+      let parent = $('.detail-content .next-card-title div').parent();
       let title = $('.detail-content .next-card-title div span').text();
-      let bugId = $('.detail-basic-id').text();
-      let cpStr = bugId + ' - ' + title;
-      addIndicator(`您已复制[${cpStr}]内容!`);
-      GM_setClipboard(cpStr);
-    });
+      $('.detail-content  .next-card-title div').css('display', 'none');
+      $(parent).prepend('<span class="xxl_btn detail-title" title="单击复制标题" style="word-break: break-all;"></span>');
+      $('.xxl_btn').text(title);
+      $(".xxl_btn").css({
+        fontSize: 24
+      });
+      $(".xxl_btn").on("click", function (e) {
+        console.log("x: " + e.pageX + ", y: " + e.pageY);
+        let title = $('.xxl_btn').text();
+        addIndicator("您已复制标题内容!");
+        GM_setClipboard(title);
+      });
+      $(".detail-basic-id").on("click", function (e) {
+        console.log("x: " + e.pageX + ", y: " + e.pageY);
+        let title = $('.detail-basic-id').text();
+        addIndicator("您已复制BugId !");
+        GM_setClipboard(title);
+      });
+    }
+  }
+  
+  function addCopyButton() {
+    let url = window.location.href;
+    console.log("url: " + url);
+    let res = url.indexOf("https://aone.alibaba-inc.com/v2");
+    //新版Aone
+    if (res == 0) {
+      let rightToolbar = $('.toolbar--tools--3UNY7Ll');
+      let btn = '<i class="aone-icon aone-medium"><div class="xxl_copy_btn_v2 aone-btn aone-medium aone-btn-primary isFourCNCharBtn is-yunxiao"><span class="aone-btn-helper">复制BugId&amp;标题</span></div></i>';
+      $(btn).prependTo(rightToolbar);
+      $(".xxl_copy_btn_v2").parent().on("click", function (e) {
+        console.log("x: " + e.pageX + ", y: " + e.pageY);
+        let title = $('#workitemTitle').text();
+        let items = $('.AttributeFormat--attributeItem--14pG5s3 .AttributeFormat--displayText--1Banb6j');
+        if (items.length == 0) return;
+        let ele = items[0];
+        console.log(ele);
+        let bugId = $(ele).text();
+        let cpStr = bugId + ' - ' + title;
+        addIndicator(`您已复制[${cpStr}]内容!`);
+        GM_setClipboard(cpStr);
+      });
+    } else {
+      //旧版Aone
+      let rightToolbar = $('.toolbar-section-right');
+      let btn = '<div class="toolbar-section-item"><div class="xxl_copy_btn next-btn next-btn-primary next-btn-medium"><span>复制BugId&amp;标题</span></div></div>';
+      $(btn).prependTo(rightToolbar);
+      // $('.xxl_copy_btn').text(title);
+      $(".xxl_copy_btn").on("click", function (e) {
+        console.log("x: " + e.pageX + ", y: " + e.pageY);
+        let title = $('.detail-content .next-card-title div span').text();
+        let bugId = $('.detail-basic-id').text();
+        let cpStr = bugId + ' - ' + title;
+        addIndicator(`您已复制[${cpStr}]内容!`);
+        GM_setClipboard(cpStr);
+      });
+    }
   }
 
   GM_addStyle(`
@@ -102,6 +138,10 @@
     }
     .k3-container{
       background: #CCE8CF77 !important;
+    }
+    .xxl_copy_btn_v2{
+      width: auto !important;
+      padding: 0 10px !important;
     }
   `);
 

@@ -368,11 +368,23 @@
 
     saveCurrentDataToLocal();
 
+    let titleInput = $('.xl_ab_itemContainer_1 .xl_ab_result').val();
+    let rootCauseInput = $('.xl_ab_itemContainer_2 .xl_ab_result').val();
+    let solutionInput = $('.xl_ab_itemContainer_3 .xl_ab_result').val();
+    let testSuggestionInput = $('.xl_ab_itemContainer_4 .xl_ab_result').val();
+
+    //全部填写完才显示复制按钮
+    if (titleInput.length && rootCauseInput.length && solutionInput.length && testSuggestionInput.length) {
+      $('.xl_result_commit .xl_ab_translate_5').css({ display: "block" });
+    } else {
+      $('.xl_result_commit .xl_ab_translate_5').css({ display: "none" });
+    }
+
     let bugId = $('.detail-basic-id').text();
-    let title = 'BugID:' + bugId + ': ' + $('.xl_ab_itemContainer_1 .xl_ab_result').val();
-    let rootCause = "Root Cause: " + $('.xl_ab_itemContainer_2 .xl_ab_result').val();
-    let solution = "Solution: " + $('.xl_ab_itemContainer_3 .xl_ab_result').val();
-    let testSuggestion = "Test Suggestion: " + $('.xl_ab_itemContainer_4 .xl_ab_result').val();
+    let title = 'BugID:' + bugId + ': ' + titleInput;
+    let rootCause = "Root Cause: " + rootCauseInput;
+    let solution = "Solution: " + solutionInput;
+    let testSuggestion = "Test Suggestion: " + testSuggestionInput;
     let result = `${title}\n\n${rootCause}\n${solution}\n${testSuggestion}`;
 
     $('.xl_result_commit .xl_result_textarea').val(result);
@@ -424,6 +436,8 @@
       console.log("翻译文本为空");
       return;
     }
+    //发现需要翻译的文本中如果包含“+”号会翻译失败，需要过滤+号
+    query = query.replace(/\+/g, "");
     console.log("开始翻译：" + query);
     let appid = "20220505001203855";
     let salt = "1231231";

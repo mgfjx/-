@@ -5,6 +5,7 @@
 // @description  百度首页美化脚本
 // @author       mgfjx
 // @include      https://www.baidu.com/*
+// @run-at document-start
 // @require      http://code.jquery.com/jquery-1.11.0.min.js
 // @grant        GM_addStyle
 // @grant        GM_getResourceURL
@@ -18,25 +19,24 @@
 
   console.log("百度油猴...");
 
-  document.onkeydown = function (event) {
-      var e = event || window.event || arguments.callee.caller.arguments[0];
-      console.log("keyCode: " + e.keyCode);
-      if (e && e.keyCode == 91) {
-          showNavPanel();
-      }
-  };
-
-  try {
-      $("#s_mp").remove();
-      $(".user-name").remove();
-  } catch {
-      console.log("百度油猴出现异常!");
+  window.onload = function () { //事件处理函数
+    onElementsLoaded();
   }
 
-  // $("body").append('<div class="xldiv"><img src="' + GM_getResourceURL("Icon") +'"></div>');
-  $("body").append('<img class="xldiv" src="' + GM_getResourceURL("Icon") + '" />');
-  $("#head").attr("background", GM_getResourceURL("paper"));
-  $(".xldiv").css({
+  function onElementsLoaded() {
+    addShowNavBtn();
+
+    try {
+      $("#s_mp").remove();
+      $(".user-name").remove();
+    } catch {
+      console.log("百度油猴出现异常!");
+    }
+  }
+
+  function addShowNavBtn() {
+    $("body").append('<img class="xldiv" src="' + GM_getResourceURL("Icon") + '" />');
+    $(".xldiv").css({
       height: "20px",
       width: "20px",
       position: "absolute",
@@ -45,28 +45,23 @@
       borderRadius: "10px",
       boxShadow: "0px 0px 30px #888888",
       padding: 5
-  });
-
-  $("#s_main").css({
-      display: "none"
-  });
+    });
+    $(".xldiv").click(showNavPanel);
+  }
 
   function showNavPanel() {
-      let display = $("#s_main").css("display");
-      if (display == "none") {
-          $("#s_main").css("display", "block");
-      } else {
-          $("#s_main").css({
-              display: "none"
-          });
-      }
+    let display = $("#s_main").css("display");
+    if (display == "none") {
+      $("#s_main").attr({style: "display: block !important"});
+    } else {
+      $("#s_main").attr({style: "display: none !important"});
+    }
   }
-  $(".xldiv").click(showNavPanel);
 
   GM_addStyle(`
     #s-top-left, .s-weather-wrapper, #s_side_wrapper, #bottom_layer,
     .ipt_rec, .c-color-text, .s-mblock-title .s-opacity-border4-bottom,
-    .s-top-nav, .tips-manager-area, #s-hotsearch-wrapper, .soutu-btn {
+    .s-top-nav, .tips-manager-area, #s-hotsearch-wrapper, .soutu-btn, #s_main {
         display: none !important;
     }
     .s-block-container, #s_main {

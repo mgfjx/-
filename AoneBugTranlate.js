@@ -374,9 +374,15 @@
     let testSuggestionInput = $('.xl_ab_itemContainer_4 .xl_ab_result').val();
 
     //全部填写完才显示复制按钮
+    let passCSS = { color: "#3fb54c", fontWeight: "bold"};
+    let blockCSS = { color: "red", fontWeight: "normal"};
     if (titleInput.length && rootCauseInput.length && solutionInput.length && testSuggestionInput.length) {
+      $('.xl_result_commit .xl_result_textarea').css(passCSS);
+      $('.xl_result_comment .xl_result_textarea').css(passCSS);
       $('.xl_result_commit .xl_ab_translate_5').css({ display: "block" });
     } else {
+      $('.xl_result_commit .xl_result_textarea').css(blockCSS);
+      $('.xl_result_comment .xl_result_textarea').css(blockCSS);
       $('.xl_result_commit .xl_ab_translate_5').css({ display: "none" });
     }
 

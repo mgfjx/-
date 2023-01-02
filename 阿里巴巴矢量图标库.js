@@ -5,7 +5,7 @@
 // @description  IconFont工具
 // @author       You
 // @include      https://www.iconfont.cn/*
-// @match
+// @icon         https://img.alicdn.com/imgextra/i4/O1CN01Z5paLz1O0zuCC7osS_!!6000000001644-55-tps-83-82.svg
 // @require      http://code.jquery.com/jquery-1.11.0.min.js
 // @require      https://cdn.jsdelivr.net/npm/jszip@3.7.1/dist/jszip.min.js
 // @grant        GM_addStyle

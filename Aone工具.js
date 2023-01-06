@@ -9,7 +9,7 @@
 // @match        https://aone.alibaba-inc.com/v2/project/*/bug/*
 // @match        https://aone.alibaba-inc.com
 // @match        https://yuque.antfin-inc.com/*
-// @match        https://aone.alibaba-inc.com/project/1147545/issue*
+// @match        https://aone.alibaba-inc.com/project/*/issue*
 // @require      http://code.jquery.com/jquery-1.11.0.min.js
 // @grant        GM_addStyle
 // @grant        GM_setClipboard
@@ -83,7 +83,7 @@
       });
     }
   }
-  
+
   function addCopyButton() {
     let url = window.location.href;
     console.log("url: " + url);
@@ -120,6 +120,45 @@
         GM_setClipboard(cpStr);
       });
     }
+  }
+
+  //收集bug连接
+  function collectButLinks() {
+    var father = $(".km-toolbar .btn-group .btn-primary");
+    console.log("father: " + father);
+    // $(father).append('<button class="xxl_list_bug_link_btn">打印所以bug链接</button>');
+    $(father).after('<div type="button" class="btn btn-primary xxl_list_bug_link_btn">打印所以bug链接</div>');
+    $(".xxl_list_bug_link_btn").css({
+      marginLeft: "12px"
+    });
+    let str = "";
+    $(".xxl_list_bug_link_btn").click(function () {
+      console.log("列出所有links");
+      let bugList = $(".issue-list .km-list-item");
+      let array = [];
+      for (let i = 0; i < bugList.length; i++) {
+        let ele = bugList[i];
+        let bugId = $(ele).attr("data-id");
+        let link = "https://work.aone.alibaba-inc.com/issue/" + bugId;
+        array[i] = link;
+        // console.log(link);
+        str = str + '\n' + link
+      }
+      // console.log(str);
+      addIndicator("您已复制所有bug链接!");
+      GM_setClipboard(str);
+    });
+  }
+
+  function addCollectBut() {
+    let interval = setInterval(() => {
+      let xxlBtn = $('.xxl_list_bug_link_btn');
+      if (xxlBtn.length == 0) {
+        collectButLinks();
+      } else {
+        clearInterval(interval);
+      }
+    }, 1000);
   }
 
   GM_addStyle(`
@@ -168,45 +207,41 @@
   window.staticCount = 0;
 
   function modifyActiveStyle() {
-    console.log("count: ", window.staticCount);
-    let cycleTime = 200;
-    setTimeout(() => {
-      if (window.staticCount * cycleTime > 5000) {
-        window.staticCount = 0;
-        return;
-      }
-      window.staticCount++;
-      let items = $('.nav-tabs .group-item a');
-      for (let i = 0; i < items.length; i++) {
-        const ele = items[i];
-        $(ele).attr("style", "border:2px solid #4b8bf4;");
-      }
+    console.log("modifyActiveStyle excute.");
+    let count = 0;
+    let interval = setInterval(() => {
       let li = $('.nav-tabs .active');
       if (li.length == 0) {
-        console.log("无active选中态!");
-        modifyActiveStyle();
-        return;
+        console.log("无active选中态! count: " + count);
+      } else {
+        let active = $('.nav-tabs .active a');
+        $(active).attr("style", "border:2px solid #ff0000 !important;");
+        console.log("li: ", li);
+        clearInterval(interval);
       }
-      let active = $('.nav-tabs .active a');
-      $(active).attr("style", "border:2px solid #ff0000;");
-      console.log("li: " + li);
-      if (window.staticCount < 20) {
-        window.staticCount = 20; //状态维持1秒钟
+      count = count + 1;
+      console.log(`modifyActiveStyle 执行了${count}次!`);
+      if (count >= 20) {
+        clearInterval(interval);
       }
-      modifyActiveStyle();
-    }, cycleTime);
+    }, 2000);
   }
 
   window.addEventListener("hashchange", myFunction);
   function myFunction() {
     let url = window.location.href;
-    let reg = new RegExp("https://aone.alibaba-inc.com/project/\\d+/issue\\?#filter");
+    let reg = new RegExp("https://aone.alibaba-inc.com/project/\\d+/issue\\?");
     if (url.match(reg)) {
       modifyActiveStyle();
+      addCollectBut();
+      console.log("link change matched");
+    } else {
+      console.log("not matched link: " + url);
     }
   }
 
   modifyActiveStyle();
+  addCollectBut();
 
   //bug筛选
   GM_addStyle(`
@@ -230,6 +265,12 @@
     }
     .nav-tabs > li.group-item .badge {
       right:5px !important;
+    }
+    .nav-tabs .active a {
+      border:2px solid #ff0000 !important;
+    }
+    .nav-tabs .group-item a {
+      border:2px solid #4b8bf4 !important;
     }
   `);
 

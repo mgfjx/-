@@ -126,8 +126,8 @@
   function collectButLinks() {
     var father = $(".km-toolbar .btn-group .btn-primary");
     console.log("father: " + father);
-    // $(father).append('<button class="xxl_list_bug_link_btn">打印所以bug链接</button>');
-    $(father).after('<div type="button" class="btn btn-primary xxl_list_bug_link_btn">打印所以bug链接</div>');
+    // $(father).append('<button class="xxl_list_bug_link_btn">复制本页bug链接</button>');
+    $(father).after('<div type="button" class="btn btn-primary xxl_list_bug_link_btn">复制本页bug链接</div>');
     $(".xxl_list_bug_link_btn").css({
       marginLeft: "12px"
     });
@@ -212,7 +212,7 @@
     let interval = setInterval(() => {
       let li = $('.nav-tabs .active');
       if (li.length == 0) {
-        console.log("无active选中态! count: " + count);
+        // console.log("无active选中态! count: " + count);
       } else {
         let active = $('.nav-tabs .active a');
         $(active).attr("style", "border:2px solid #ff0000 !important;");
@@ -220,7 +220,7 @@
         clearInterval(interval);
       }
       count = count + 1;
-      console.log(`modifyActiveStyle 执行了${count}次!`);
+      // console.log(`modifyActiveStyle 执行了${count}次!`);
       if (count >= 20) {
         clearInterval(interval);
       }

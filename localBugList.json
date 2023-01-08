@@ -1,0 +1,2702 @@
+[
+    {
+      "bugId": 30427010,
+      "addTime": 1651535941000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 37089226,
+      "addTime": 1658150125000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 55764018,
+      "addTime": 1665092322000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 42055086,
+      "addTime": 1644802767000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 79274736,
+      "addTime": 1655336004000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 81549565,
+      "addTime": 1649186681000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 46791495,
+      "addTime": 1650278855000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 46273713,
+      "addTime": 1664313210000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 79029671,
+      "addTime": 1666135386000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 91631517,
+      "addTime": 1668309549000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 19188883,
+      "addTime": 1664365087000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 93329700,
+      "addTime": 1641260544000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 59817991,
+      "addTime": 1650655887000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 66546164,
+      "addTime": 1655234498000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 96991082,
+      "addTime": 1661062424000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 62572077,
+      "addTime": 1669397168000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 55033401,
+      "addTime": 1653159204000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 32744162,
+      "addTime": 1656731916000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 44578185,
+      "addTime": 1648445475000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 68459330,
+      "addTime": 1644594944000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 82998606,
+      "addTime": 1647436873000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 74445763,
+      "addTime": 1658085841000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 68084381,
+      "addTime": 1665429075000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 55666589,
+      "addTime": 1644572711000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 64444138,
+      "addTime": 1652602759000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 32574278,
+      "addTime": 1644973534000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 77164874,
+      "addTime": 1661857598000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 77906789,
+      "addTime": 1664212565000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 89746843,
+      "addTime": 1646185184000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 56343774,
+      "addTime": 1663030877000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 22252816,
+      "addTime": 1668294512000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 82722056,
+      "addTime": 1655495799000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 57751890,
+      "addTime": 1663442071000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 50293832,
+      "addTime": 1652572694000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 38028181,
+      "addTime": 1641271991000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 29463682,
+      "addTime": 1655912926000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 95013176,
+      "addTime": 1666654989000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 74397267,
+      "addTime": 1668846786000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 12717956,
+      "addTime": 1668137615000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 45358565,
+      "addTime": 1645685618000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 52349925,
+      "addTime": 1653125172000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 57298804,
+      "addTime": 1645438541000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 34560200,
+      "addTime": 1661107721000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 15280130,
+      "addTime": 1643232462000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 99708152,
+      "addTime": 1664764480000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 26360698,
+      "addTime": 1656955050000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 15065351,
+      "addTime": 1650348883000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 70659466,
+      "addTime": 1667583584000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 52706660,
+      "addTime": 1654730609000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 73348401,
+      "addTime": 1650858913000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 67660147,
+      "addTime": 1642505054000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 14273433,
+      "addTime": 1643484702000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 43624304,
+      "addTime": 1659330878000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 85845590,
+      "addTime": 1641620324000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 69895782,
+      "addTime": 1653445864000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 17132297,
+      "addTime": 1641990648000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 70769091,
+      "addTime": 1650873993000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 79861377,
+      "addTime": 1667871965000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 82862992,
+      "addTime": 1647870786000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 26034066,
+      "addTime": 1667949075000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 30789033,
+      "addTime": 1649135949000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 78640556,
+      "addTime": 1646060066000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 54171924,
+      "addTime": 1651809528000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 65036072,
+      "addTime": 1666100236000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 19599783,
+      "addTime": 1667618181000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 37976503,
+      "addTime": 1650153943000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 63255270,
+      "addTime": 1647379887000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 98786418,
+      "addTime": 1650868333000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 48116705,
+      "addTime": 1655153380000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 65032548,
+      "addTime": 1660961671000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 55350672,
+      "addTime": 1643463495000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 54042899,
+      "addTime": 1664240143000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 78573838,
+      "addTime": 1651953450000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 41274074,
+      "addTime": 1654678158000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 40302813,
+      "addTime": 1669627996000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 88407518,
+      "addTime": 1655246604000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 35600527,
+      "addTime": 1665610470000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 76540626,
+      "addTime": 1641333405000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 69274113,
+      "addTime": 1665203462000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 84333369,
+      "addTime": 1669818165000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 98253336,
+      "addTime": 1646220269000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 21426263,
+      "addTime": 1658167749000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 57429728,
+      "addTime": 1650371726000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 70156204,
+      "addTime": 1655532405000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 23105234,
+      "addTime": 1661607309000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 12101536,
+      "addTime": 1655991110000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 71015182,
+      "addTime": 1652231243000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 18412089,
+      "addTime": 1663152764000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 74954154,
+      "addTime": 1667019676000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 60763169,
+      "addTime": 1661058250000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 75082816,
+      "addTime": 1646859543000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 81358442,
+      "addTime": 1642611990000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 65706052,
+      "addTime": 1651994834000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 20356169,
+      "addTime": 1661142070000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 56134760,
+      "addTime": 1645088588000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 93605427,
+      "addTime": 1660822714000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 18662933,
+      "addTime": 1655501424000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 19173303,
+      "addTime": 1668179243000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 94238489,
+      "addTime": 1663820708000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 68119428,
+      "addTime": 1658647155000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 63415089,
+      "addTime": 1662733025000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 35686044,
+      "addTime": 1665492079000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 19872349,
+      "addTime": 1646088995000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 84790784,
+      "addTime": 1663066583000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 77821566,
+      "addTime": 1663229258000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 40000880,
+      "addTime": 1665308224000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 58189343,
+      "addTime": 1667380219000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 45847461,
+      "addTime": 1657118445000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 20948834,
+      "addTime": 1642520149000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 97234702,
+      "addTime": 1642055550000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 32880326,
+      "addTime": 1667125967000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 47235038,
+      "addTime": 1655807408000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 21090097,
+      "addTime": 1662677853000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 50559741,
+      "addTime": 1642210772000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 33084533,
+      "addTime": 1655421108000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 67332283,
+      "addTime": 1644075396000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 78306907,
+      "addTime": 1660869902000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 14889588,
+      "addTime": 1652017003000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 26277481,
+      "addTime": 1658814752000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 10826253,
+      "addTime": 1666356444000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 45379634,
+      "addTime": 1653619682000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 39001440,
+      "addTime": 1654440043000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 71373519,
+      "addTime": 1649248399000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 94863109,
+      "addTime": 1643303246000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 81395659,
+      "addTime": 1641185446000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 37353512,
+      "addTime": 1662978426000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 44465947,
+      "addTime": 1646690561000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 85332624,
+      "addTime": 1651115967000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 68391871,
+      "addTime": 1645179428000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 27488665,
+      "addTime": 1651539874000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 46757377,
+      "addTime": 1646789060000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 69235020,
+      "addTime": 1655250044000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 38091547,
+      "addTime": 1667719025000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 42407832,
+      "addTime": 1654419100000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 60232481,
+      "addTime": 1662143594000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 69050580,
+      "addTime": 1645065495000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 84236487,
+      "addTime": 1646381601000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 99616266,
+      "addTime": 1669142715000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 85166449,
+      "addTime": 1641791467000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 66223922,
+      "addTime": 1657775507000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 57002255,
+      "addTime": 1657417988000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 90343040,
+      "addTime": 1647115001000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 47521804,
+      "addTime": 1661981721000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 73748506,
+      "addTime": 1644595156000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 67663268,
+      "addTime": 1649576019000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 92544068,
+      "addTime": 1646289305000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 83335242,
+      "addTime": 1669573081000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 80277296,
+      "addTime": 1652075302000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 62726418,
+      "addTime": 1652762181000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 19564877,
+      "addTime": 1664344785000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 22024103,
+      "addTime": 1663285273000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 80301951,
+      "addTime": 1658991662000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 43721671,
+      "addTime": 1653790581000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 78578108,
+      "addTime": 1655470363000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 97983343,
+      "addTime": 1668836533000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 99142298,
+      "addTime": 1647483404000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 99746523,
+      "addTime": 1647098300000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 40259666,
+      "addTime": 1659150447000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 65406176,
+      "addTime": 1665735198000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 34000413,
+      "addTime": 1647516223000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 88195335,
+      "addTime": 1651516580000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 40899297,
+      "addTime": 1662098886000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 33297500,
+      "addTime": 1654663334000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 94752863,
+      "addTime": 1654239971000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 72483571,
+      "addTime": 1669089407000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 88130718,
+      "addTime": 1649944576000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 51543232,
+      "addTime": 1654770426000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 77657979,
+      "addTime": 1667715946000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 68350788,
+      "addTime": 1649195721000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 35237056,
+      "addTime": 1666339844000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 25730009,
+      "addTime": 1643247642000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 34630506,
+      "addTime": 1653663249000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 25014812,
+      "addTime": 1661165616000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 44210189,
+      "addTime": 1653189325000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 93740977,
+      "addTime": 1664804742000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 69085299,
+      "addTime": 1644265006000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 65169078,
+      "addTime": 1646629340000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 43667367,
+      "addTime": 1646605038000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 26560432,
+      "addTime": 1644417213000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 50287535,
+      "addTime": 1649046311000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 72881242,
+      "addTime": 1650967840000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 23700124,
+      "addTime": 1644234807000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 32191178,
+      "addTime": 1647882449000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 26394384,
+      "addTime": 1649541498000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 29646425,
+      "addTime": 1657865042000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 95196584,
+      "addTime": 1650965713000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 59471594,
+      "addTime": 1668227738000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 83357305,
+      "addTime": 1649133813000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 54237401,
+      "addTime": 1658201373000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 28801190,
+      "addTime": 1656542983000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 65192927,
+      "addTime": 1663583749000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 77385189,
+      "addTime": 1658182330000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 44188318,
+      "addTime": 1662238410000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 91690076,
+      "addTime": 1644186188000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 74426182,
+      "addTime": 1648642656000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 65553964,
+      "addTime": 1641026192000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 40952243,
+      "addTime": 1665026902000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 79414369,
+      "addTime": 1657255064000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 89213297,
+      "addTime": 1666271010000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 61053755,
+      "addTime": 1645223122000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 49622284,
+      "addTime": 1651268862000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 98566968,
+      "addTime": 1654957475000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 35000231,
+      "addTime": 1652865192000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 27008622,
+      "addTime": 1658058219000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 86590909,
+      "addTime": 1647157105000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 47335914,
+      "addTime": 1668254885000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 67979205,
+      "addTime": 1656312682000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 13373105,
+      "addTime": 1668893928000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 45491300,
+      "addTime": 1668823931000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 13410937,
+      "addTime": 1667827024000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 65113689,
+      "addTime": 1641107501000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 84632648,
+      "addTime": 1643456088000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 47733353,
+      "addTime": 1666803906000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 92304444,
+      "addTime": 1656636816000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 55873568,
+      "addTime": 1650411346000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 90177995,
+      "addTime": 1645156893000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 44817874,
+      "addTime": 1664781027000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 87842035,
+      "addTime": 1665180647000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 77639167,
+      "addTime": 1645789953000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 20380709,
+      "addTime": 1652055947000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 22643703,
+      "addTime": 1656016566000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 15510211,
+      "addTime": 1665042512000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 65846323,
+      "addTime": 1644532663000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 86831159,
+      "addTime": 1657853234000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 81272016,
+      "addTime": 1650629404000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 91427133,
+      "addTime": 1646572448000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 66698733,
+      "addTime": 1647111742000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 70045146,
+      "addTime": 1643145086000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 44098063,
+      "addTime": 1662910864000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 96206324,
+      "addTime": 1654710824000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 75192950,
+      "addTime": 1656350465000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 55419593,
+      "addTime": 1662080128000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 35904743,
+      "addTime": 1652126734000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 49169241,
+      "addTime": 1667023111000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 61255488,
+      "addTime": 1651632387000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 66184869,
+      "addTime": 1645478525000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 18051252,
+      "addTime": 1663449272000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 46770882,
+      "addTime": 1661544979000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 88642545,
+      "addTime": 1655599780000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 95964325,
+      "addTime": 1643253814000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 38346441,
+      "addTime": 1663273636000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 42850386,
+      "addTime": 1664942732000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 71635342,
+      "addTime": 1664407990000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 29949525,
+      "addTime": 1667675950000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 59893377,
+      "addTime": 1643262486000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 52538061,
+      "addTime": 1641569536000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 39048513,
+      "addTime": 1649538287000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 86048048,
+      "addTime": 1665328946000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 86254647,
+      "addTime": 1667695488000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 48693081,
+      "addTime": 1657016258000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 51702577,
+      "addTime": 1660905909000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 86637720,
+      "addTime": 1642023109000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 66411517,
+      "addTime": 1663486163000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 50428888,
+      "addTime": 1645699880000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 89814014,
+      "addTime": 1658862457000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 48853111,
+      "addTime": 1667899243000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 70445591,
+      "addTime": 1663715087000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 84569376,
+      "addTime": 1664501385000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 78590842,
+      "addTime": 1660266093000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 81994751,
+      "addTime": 1644834804000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 72932997,
+      "addTime": 1654502925000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 17701358,
+      "addTime": 1649859730000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 97230968,
+      "addTime": 1649632397000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 83537310,
+      "addTime": 1651085624000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 26717905,
+      "addTime": 1657693970000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 53865644,
+      "addTime": 1641235157000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 38631802,
+      "addTime": 1646567424000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 46103026,
+      "addTime": 1656805101000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 45758633,
+      "addTime": 1656369463000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 90597176,
+      "addTime": 1646393962000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 35404865,
+      "addTime": 1644474561000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 37634828,
+      "addTime": 1657473470000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 82022834,
+      "addTime": 1651445312000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 61915277,
+      "addTime": 1644174194000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 69543596,
+      "addTime": 1665289750000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 59585677,
+      "addTime": 1655710590000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 11358828,
+      "addTime": 1663384268000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 65007146,
+      "addTime": 1658109732000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 53226094,
+      "addTime": 1662058002000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 82974769,
+      "addTime": 1663154868000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 63482924,
+      "addTime": 1658084292000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 10122378,
+      "addTime": 1648270894000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 75528617,
+      "addTime": 1666485441000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 66199999,
+      "addTime": 1642002426000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 19529352,
+      "addTime": 1663137850000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 29762807,
+      "addTime": 1649973510000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 63904423,
+      "addTime": 1656834223000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 70830785,
+      "addTime": 1658551664000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 77544853,
+      "addTime": 1644305735000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 75969252,
+      "addTime": 1645495874000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 44517985,
+      "addTime": 1659857681000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 84346847,
+      "addTime": 1660462415000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 18987776,
+      "addTime": 1666230025000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 48300713,
+      "addTime": 1667056926000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 96588681,
+      "addTime": 1662307061000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 47220585,
+      "addTime": 1666228867000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": false,
+      "flowed": true
+    },
+    {
+      "bugId": 82651029,
+      "addTime": 1641239342000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    },
+    {
+      "bugId": 29613441,
+      "addTime": 1653653884000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": true
+    },
+    {
+      "bugId": 32175921,
+      "addTime": 1660052949000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": true,
+      "relReopen": false,
+      "flowed": false
+    },
+    {
+      "bugId": 72265159,
+      "addTime": 1665700336000,
+      "butTitle": "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】",
+      "resolver": "谢小龙",
+      "reopen": false,
+      "relReopen": true,
+      "flowed": false
+    }
+  ];

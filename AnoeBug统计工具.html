@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="AnoeBug统计工具.css">
+  <script type="text/javascript" src="https://libs.cdnjs.net/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/localBugList.json"></script>
+</head>
+
+<body style="background-color: aquamarine;">
+
+  <div class="xl_blocal_bg">
+    <div class="xl_blocal_container_bg">
+        <div class="xl_blocal_header">
+            <div class="xl_blocal_header_top xl_blocal_header_item">
+                <div>
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="xl_blocal_header_bottom xl_blocal_header_item">
+                <div>
+                    <span>添加时间: </span><input type="date" /><span> - </span><input type="date" />
+                    <div>
+                        <div class="xl_blocal_check_container">
+                            <input class="xl_blocal_header_reopen" type="checkbox" ${reopenCheck} />
+                            <span class="">reopen</span>
+                        </div>
+                        <div class="xl_blocal_check_container">
+                            <input class="xl_blocal_header_rel_reopen" type="checkbox" ${relReopenCheck} />
+                            <span>有效reopen</span>
+                        </div>
+                        <div class="xl_blocal_check_container">
+                            <input class="xl_blocal_header_flow" type="checkbox" ${flowCheck} />
+                            <span>流转</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="xl_blocal_body">
+            <div class="xl_blocal_ul">
+                <div class="xl_blocal_li">
+                    <div class="xl_blocal_li_top">
+                        <div class="xl_blocal_li_top_check_container">
+                            <input class="xl_blocal_li_top_check" type="checkbox" style="" />
+                        </div>
+                        <div class="xl_blocal_li_top_link_container">
+                            <a class="xl_blocal_li_top_link" target="_blank" href="https://work.aone.alibaba-inc.com/issue/47136648">
+                                47136648 - 【音乐】耳机播放音乐时，进行通讯，通话通道选择全车，通话中会暂，进行通讯，通话通道选择全车，通话中会暂，进行通讯，通话通道选择全车，通话中会暂
+                            </a>
+                        </div>
+                    </div>
+                    <div class="xl_blocal_li_bottom">
+                        <div class=".xl_blocal_li_bottom_info">
+                            <span class="xl_blocal_li_bottom_info_span">添加时间: 2023-11-12</span>
+                            <span class="xl_blocal_li_bottom_info_span">指派给: 谢小龙</span>
+                        </div>
+                        <div class="xl_blocal_li_bottom_tag_container">
+                            <div class="xl_blocal_check_container">
+                                <input class="xl_blocal_li_check_reopen" type="checkbox" ${reopenCheck} readonly="readonly"/>
+                                <span>reopen</span>
+                            </div>
+                            <div class="xl_blocal_check_container">
+                                <input class="xl_blocal_li_check_rel_reopen" type="checkbox" ${relReopenCheck} />
+                                <span>有效reopen</span>
+                            </div>
+                            <div class="xl_blocal_check_container">
+                                <input class="xl_blocal_li_check_flow" type="checkbox" ${flowCheck} />
+                                <span>流转</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $(".xl_blocal_bg").on("click", () => {
+      $(".xl_blocal_bg").css("display", "none");
+    });
+
+    $(".xl_blocal_container_bg").on("click", () => {
+      event.stopPropagation();
+    });
+
+    function testHTML() {
+        let allItems = '';
+        for (let i = 0; i < 30; i++) {
+            let bugId = "47136648";
+            let bugLink = `https://work.aone.alibaba-inc.com/issue/${bugId}`;
+            let bugTitle = `${i+1}. ` + "47136648 - 【音乐】耳机播放音乐时，进行通讯，通话通道选择全车，通话中会暂，进行通讯，通话通道选择全车，通话中会暂，进行通讯，通话通道选择全车，通话中会暂";
+            let resolver = "谢小龙";
+            let addTime = new Date().valueOf();
+            let updateTime = addTime;
+            let reopenCheck = Math.floor(Math.random() * 1000)%2 == 0 ? "checked" : "";
+            let relReopenCheck = Math.floor(Math.random() * 1000)%2 == 0 ? "checked" : "";
+            let flowCheck = Math.floor(Math.random() * 1000)%2 == 0 ? "checked" : "";
+            console.log("reopenCheck: " + reopenCheck);
+            let item = `
+                        <div class="xl_blocal_li">
+                            <div class="xl_blocal_li_top">
+                                <div class="xl_blocal_li_top_check_container">
+                                    <input class="xl_blocal_li_top_check" type="checkbox" style="" />
+                                </div>
+                                <div class="xl_blocal_li_top_link_container">
+                                    <a class="xl_blocal_li_top_link" target="_blank" href=${bugLink}>
+                                        ${bugTitle}
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="xl_blocal_li_bottom">
+                                <div class=".xl_blocal_li_bottom_info">
+                                    <span class="xl_blocal_li_bottom_info_span">添加时间: ${addTime}</span>
+                                    <span class="xl_blocal_li_bottom_info_span">指派给: ${resolver}</span>
+                                </div>
+                                <div class="xl_blocal_li_bottom_tag_container">
+                                    <div class="xl_blocal_check_container">
+                                        <input class="xl_blocal_li_check_reopen" type="checkbox" ${reopenCheck} />
+                                        <span>reopen</span>
+                                    </div>
+                                    <div class="xl_blocal_check_container">
+                                        <input class="xl_blocal_li_check_rel_reopen" type="checkbox" ${relReopenCheck} />
+                                        <span>有效reopen</span>
+                                    </div>
+                                    <div class="xl_blocal_check_container">
+                                        <input class="xl_blocal_li_check_flow" type="checkbox" ${flowCheck} />
+                                        <span>流转</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+            allItems = allItems + item;
+        }
+        $(".xl_blocal_ul").append(allItems);
+    }
+    testHTML();
+
+    $(".xl_blocal_check_container input").change(function (e) {
+        let checked = $(this).is(':checked');
+        console.log(checked) // 如果true 则选中状态，false 则没有选中
+        checkoutCheckbox(e.target, checked);
+    });
+
+    //点击CheckBox，改变状态
+    $('.xl_blocal_check_container span').on("click", (e) => {
+        let input = $(e.target).parent().children('input');
+        let checked = $(input).is(':checked');
+        $(input).prop({checked:!checked});
+        checkoutCheckbox(input, !checked);
+    });
+
+    function checkoutCheckbox(ele, checked) {
+        let className = $(ele).attr('class');
+        console.log('input class name: ' + className);
+        if (className == 'xl_blocal_header_reopen') {
+
+        } else if (className == 'xl_blocal_header_reopen') {
+
+        } else if (className == 'xl_blocal_header_reopen') {
+
+        } else {
+
+        }
+    }
+
+    function readJson() {
+        if (window.FileReader) {
+            var file = 'D:\MonkeyScript\localBugList.json';
+            // let filename = file.name.split(".")[0];
+            var reader = new FileReader();
+            reader.onload = function() {
+                console.log(this.result)
+            }
+            reader.readAsText(file);
+        } else {
+            console.log("read error.");
+        }
+    }
+    readJson();
+
+  </script>
+
+</body>
+
+</html>

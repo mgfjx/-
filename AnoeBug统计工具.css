@@ -1,0 +1,158 @@
+.xl_blocal_bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, 0.6);
+    z-index: 10000;
+    /* display: flex; */
+    /* align-items: flex-end; */
+}
+
+.xl_blocal_container_bg {
+    /* flex: 1; */
+    background-color: #fff;
+    /* margin-left: 60%; */
+    /* margin-left: 800px; */
+    /* margin-right: 100px; */
+    /* overflow: hidden; */
+    float: right;
+    width: 800px;
+    height: 100%;
+    padding: 0;
+    font-size: 14px;
+}
+
+.xl_blocal_header {
+    background-color: bisque;
+    margin: auto;
+    height: 80px;
+}
+
+.xl_blocal_header div {
+    height: 50%;
+}
+
+.xl_blocal_header_top {
+    background-color: aqua;
+}
+
+.xl_blocal_header_bottom {
+    background-color: rgb(23, 111, 18);
+}
+
+.xl_blocal_header_item div {
+    float: left;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+.xl_blocal_header_item input {
+    font-size: 12px;
+}
+
+.xl_blocal_check_container input:hover {
+    cursor: pointer;
+}
+
+.xl_blocal_check_container span:hover {
+    cursor: pointer;
+}
+
+.xl_blocal_body {
+    background-color: rgb(245, 245, 245);
+    margin: auto;
+    height: calc(100% - 80px);
+    display: flex;
+    overflow: hidden;
+}
+
+.xl_blocal_ul {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    /* background-color: coral; */
+    overflow: scroll;
+}
+
+.xl_blocal_li {
+    background-color: #fff;
+    height: 80px;
+    width: 100%;
+    margin-bottom: 5px;
+    /* background-color: cornflowerblue; */
+}
+
+.xl_blocal_li_top {
+    height: 40%;
+    /* background-color: aliceblue; */
+}
+
+.xl_blocal_li_top div {
+    float: left;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.xl_blocal_li_top_check_container {
+    width: 30px;
+}
+
+.xl_blocal_li_top_check:hover {
+    cursor: pointer;
+}
+
+.xl_blocal_li_top_link_container {
+    width: calc(100% - 30px);
+}
+
+.xl_blocal_li_top_link {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-decoration-line: none;
+}
+
+.xl_blocal_li_top_link:hover {
+    text-decoration-line: underline;
+}
+
+.xl_blocal_li_bottom {
+    height: 60%;
+    /* background-color: rgb(252, 222, 195); */
+}
+
+.xl_blocal_li_bottom div {
+
+}
+
+.xl_blocal_li_bottom_info {
+    height: 40%;
+    background-color: rgb(114, 47, 238);
+}
+
+.xl_blocal_li_bottom_info_span {
+    font-size: 10px;
+    margin-left: 10px;
+    color: rgb(175, 175, 175);
+}
+
+.xl_blocal_li_bottom_tag_container {
+    height: 60%;
+    /* float: left; */
+    display: flex;
+    align-items: center;
+}
+
+.xl_blocal_li_bottom_tag_container span {
+    color: rgb(175, 175, 175);
+}
+
+.xl_blocal_li_bottom_tag_container input {
+    margin-left: 10px;
+}

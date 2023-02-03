@@ -41,21 +41,9 @@ function fakeData() {
 
 fakeData();
 
-// const fs = require('fs')
-// console.log(fs);
-// let array = [];
-// for (let i = 0; i < 300; i++) {
-//   let obj = fakeData();
-//   array.push(obj);
-// }
-// // console.log(JSON.stringify(array));
-// fs.writeFile('D:\MonkeyScript\localBugList.json', JSON.stringify(array), err => {
-//   if (err) {
-//     console.error(err)
-//     return
-//   } else {
-//     console.log("写入成功");
-//   }
-//   //文件写入成功。
-// })
+let bugList = [1, 2, 3, 4, 5, 6, 7]
+for (let i = bugList.length - 1; i >= 0; i--) {
+  let index = bugList.length - 1 - i + 1;
+  console.log("index: " + index + ", i: " + i);
+}
 

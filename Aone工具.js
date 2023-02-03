@@ -100,7 +100,7 @@
         if (items.length == 0) return;
         let ele = items[0];
         console.log(ele);
-        let bugId = $(ele).text();
+        let bugId = $(ele).attr('title');
         let cpStr = bugId + ' - ' + title;
         addIndicator(`您已复制[${cpStr}]内容!`);
         GM_setClipboard(cpStr);

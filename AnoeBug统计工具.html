@@ -17,23 +17,35 @@
         <div class="xl_blocal_header">
             <div class="xl_blocal_header_top xl_blocal_header_item">
                 <div>
-                    <input type="text" />
+                    <span>搜索: </span>
+                    <input class="xl_blocal_header_search_input" type="text" />
+                </div>
+                <div>
+                    <span>添加时间: </span>
+                    <input type="date" /><span> - </span><input type="date" />
                 </div>
             </div>
             <div class="xl_blocal_header_bottom xl_blocal_header_item">
                 <div>
-                    <span>添加时间: </span><input type="date" /><span> - </span><input type="date" />
                     <div>
                         <div class="xl_blocal_check_container">
-                            <input class="xl_blocal_header_reopen" type="checkbox" ${reopenCheck} />
-                            <span class="">reopen</span>
+                            <input class="xl_blocal_header_reopen" type="checkbox"/>
+                            <span class="" onclick="clickedCheckBoxSpan">reopen</span>
                         </div>
                         <div class="xl_blocal_check_container">
-                            <input class="xl_blocal_header_rel_reopen" type="checkbox" ${relReopenCheck} />
+                            <input class="xl_blocal_header_rel_reopen" type="checkbox"/>
                             <span>有效reopen</span>
                         </div>
                         <div class="xl_blocal_check_container">
-                            <input class="xl_blocal_header_flow" type="checkbox" ${flowCheck} />
+                            <input class="xl_blocal_header_declin" type="checkbox"/>
+                            <span>衰退</span>
+                        </div>
+                        <div class="xl_blocal_check_container">
+                            <input class="xl_blocal_header_rel_decline" type="checkbox"/>
+                            <span>有效衰退</span>
+                        </div>
+                        <div class="xl_blocal_check_container">
+                            <input class="xl_blocal_header_flow" type="checkbox"/>
                             <span>流转</span>
                         </div>
                     </div>
@@ -99,41 +111,51 @@
             let updateTime = addTime;
             let reopenCheck = Math.floor(Math.random() * 1000)%2 == 0 ? "checked" : "";
             let relReopenCheck = Math.floor(Math.random() * 1000)%2 == 0 ? "checked" : "";
+            let declineCheck = Math.floor(Math.random() * 1000)%2 == 0 ? "checked" : "";
+            let relDeclineCheck = Math.floor(Math.random() * 1000)%2 == 0 ? "checked" : "";
             let flowCheck = Math.floor(Math.random() * 1000)%2 == 0 ? "checked" : "";
             console.log("reopenCheck: " + reopenCheck);
             let item = `
-                        <div class="xl_blocal_li">
-                            <div class="xl_blocal_li_top">
-                                <div class="xl_blocal_li_top_check_container">
-                                    <input class="xl_blocal_li_top_check" type="checkbox" style="" />
-                                </div>
-                                <div class="xl_blocal_li_top_link_container">
-                                    <a class="xl_blocal_li_top_link" target="_blank" href=${bugLink}>
-                                        ${bugTitle}
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="xl_blocal_li_bottom">
-                                <div class=".xl_blocal_li_bottom_info">
-                                    <span class="xl_blocal_li_bottom_info_span">添加时间: ${addTime}</span>
-                                    <span class="xl_blocal_li_bottom_info_span">指派给: ${resolver}</span>
-                                </div>
-                                <div class="xl_blocal_li_bottom_tag_container">
-                                    <div class="xl_blocal_check_container">
-                                        <input class="xl_blocal_li_check_reopen" type="checkbox" ${reopenCheck} />
-                                        <span>reopen</span>
-                                    </div>
-                                    <div class="xl_blocal_check_container">
-                                        <input class="xl_blocal_li_check_rel_reopen" type="checkbox" ${relReopenCheck} />
-                                        <span>有效reopen</span>
-                                    </div>
-                                    <div class="xl_blocal_check_container">
-                                        <input class="xl_blocal_li_check_flow" type="checkbox" ${flowCheck} />
-                                        <span>流转</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="xl_blocal_li" id=${bugId} >
+                          <div class="xl_blocal_li_top">
+                              <div class="xl_blocal_li_top_check_container">
+                                  <input class="xl_blocal_li_top_check" type="checkbox" style="" />
+                              </div>
+                              <div class="xl_blocal_li_top_link_container">
+                                  <a class="xl_blocal_li_top_link" target="_blank" href=${bugLink}>
+                                      ${bugTitle}
+                                  </a>
+                              </div>
+                          </div>
+                          <div class="xl_blocal_li_bottom">
+                              <div class=".xl_blocal_li_bottom_info">
+                                  <span class="xl_blocal_li_bottom_info_span">添加时间: ${addTime}</span>
+                                  <span class="xl_blocal_li_bottom_info_span">指派给: ${resolver}</span>
+                              </div>
+                              <div class="xl_blocal_li_bottom_tag_container">
+                                  <div class="xl_blocal_check_container" type="reopen">
+                                      <input class="xl_blocal_li_check_reopen" type="checkbox" ${reopenCheck} />
+                                      <span>reopen</span>
+                                  </div>
+                                  <div class="xl_blocal_check_container" type="relReopen">
+                                      <input class="xl_blocal_li_check_rel_reopen" type="checkbox" ${relReopenCheck} />
+                                      <span>有效reopen</span>
+                                  </div>
+                                  <div class="xl_blocal_check_container" type="decline">
+                                      <input class="xl_blocal_li_check_rel_reopen" type="checkbox" ${declineCheck} />
+                                      <span>衰退</span>
+                                  </div>
+                                  <div class="xl_blocal_check_container" type="relDecline">
+                                      <input class="xl_blocal_li_check_rel_reopen" type="checkbox" ${relDeclineCheck} />
+                                      <span>有效衰退</span>
+                                  </div>
+                                  <div class="xl_blocal_check_container" type="flow">
+                                      <input class="xl_blocal_li_check_flow" type="checkbox" ${flowCheck} />
+                                      <span>流转</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
                     `;
             allItems = allItems + item;
         }

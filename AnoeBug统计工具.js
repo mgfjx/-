@@ -23,22 +23,18 @@
   console.log(LOG_TAG, "油猴脚本: AnoeBug统计工具");
 
   function addCollectBtn() {
-    var father = $(".next-card-content .toolbar-section div:eq(4)");
-    // console.log(LOG_TAG, "father: ", father);
-    $(father).after(
-      '<div class="toolbar-section-item"><div class="next-btn next-btn-primary next-btn-medium back-create-button xxl_list_bug_link_btn"><span>添加到统计库</span></div></div>'
-    );
-    $(".xxl_list_bug_link_btn").css({});
+    let rightToolbar = $('.toolbar--tools--3UNY7Ll');
+    let btn = '<i class="aone-icon aone-medium xxl_list_bug_btn_li"><div class="xxl_list_bug_link_btn aone-btn aone-medium aone-btn-primary isFourCNCharBtn is-yunxiao"><span class="aone-btn-helper">添加到统计库</span></div></i>';
+    $(btn).prependTo(rightToolbar);
+    $(".xxl_list_bug_btn_li").attr("style", "margin-right: 5px !important;");
     let str = "";
     $(".xxl_list_bug_link_btn").click(addBugToLocal);
   }
 
   function addCollectPageBtn() {
-    var father = $(".next-card-content .toolbar-section div:eq(4)");
-    // console.log(LOG_TAG, "father: ", father);
-    $(father).after(
-      '<div class="toolbar-section-item"><div class="next-btn next-btn-primary next-btn-medium back-create-button xxl_list_bug_page_btn"><span>打开统计库</span></div></div>'
-    );
+    let rightToolbar = $('.toolbar--tools--3UNY7Ll');
+    let btn = '<i class="aone-icon aone-medium xxl_list_bug_btn_li"><div class="xxl_list_bug_page_btn aone-btn aone-medium aone-btn-primary isFourCNCharBtn is-yunxiao"><span class="aone-btn-helper">打开统计库</span></div></i>';
+    $(btn).prependTo(rightToolbar);
     $(".xxl_list_bug_page_btn").css({});
     let str = "";
     $(".xxl_list_bug_page_btn").click(openPage);
@@ -62,15 +58,25 @@
 
   function addBugToLocal() {
     console.log(LOG_TAG, "addBugToLocal func()");
-    let bugTitle = $(".detail-content .next-card-title div span").text();
-    let bugId = $(".detail-basic-id").text();
-    let resolver = $("#assignedToId .next-select-inner span").text();
+    let bugTitle = $('#workitemTitle').text();
+    let items = $('.AttributeFormat--attributeItem--14pG5s3 .AttributeFormat--displayText--1Banb6j');
+    if (items.length == 0) return;
+    let ele = items[0];
+    console.log(ele);
+    let bugId = $(ele).attr('title');
+    let resolverEle = $('.AttributeFormat--attributeItem--14pG5s3 .aone-select-trigger-search input')[0];
+    let resolver = $(resolverEle).attr('aria-valuetext');
+    console.log('addBugToLocal resolver: ' + resolver);
     let bugInfoObj = {};
     bugInfoObj.bugTitle = bugTitle;
     bugInfoObj.bugId = bugId;
     bugInfoObj.resolver = resolver;
     bugInfoObj.addTime = new Date().valueOf();
     bugInfoObj.updateTime = bugInfoObj.addTime;
+    if (bugId.length <= 0) {
+      console.log(LOG_TAG, "addBugToLocal bugId is null.");
+      return;
+    }
     addBugObjToLocal(bugInfoObj);
   }
 

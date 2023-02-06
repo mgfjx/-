@@ -6,7 +6,7 @@
 // @author       You
 // @match        https://work.aone.alibaba-inc.com/issue/*
 // @match        https://aone.alibaba-inc.com/v2/bug/*
-// @match        https://aone.alibaba-inc.com/v2/project/*/bug/*
+// @match        https://aone.alibaba-inc.com/v2/project/*
 // @match        https://aone.alibaba-inc.com/v2
 // @match        https://yuque.antfin-inc.com/*
 // @match        https://aone.alibaba-inc.com/project/*/issue*
@@ -197,7 +197,6 @@
     }, 500);
   }
   modifyWorkbanchStyle();
-
   GM_addStyle(`
     .aone-table-row-odd {
       background: #f7faf7 !important;

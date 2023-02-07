@@ -72,45 +72,6 @@
     });
   }
 
-  //收集bug连接
-  function collectButLinks() {
-    var father = $(".km-toolbar .btn-group .btn-primary");
-    console.log("father: " + father);
-    // $(father).append('<button class="xxl_list_bug_link_btn">复制本页bug链接</button>');
-    $(father).after('<div type="button" class="btn btn-primary xxl_list_bug_link_btn">复制本页bug链接</div>');
-    $(".xxl_list_bug_link_btn").css({
-      marginLeft: "12px"
-    });
-    let str = "";
-    $(".xxl_list_bug_link_btn").click(function () {
-      console.log("列出所有links");
-      let bugList = $(".issue-list .km-list-item");
-      let array = [];
-      for (let i = 0; i < bugList.length; i++) {
-        let ele = bugList[i];
-        let bugId = $(ele).attr("data-id");
-        let link = "https://work.aone.alibaba-inc.com/issue/" + bugId;
-        array[i] = link;
-        // console.log(link);
-        str = str + '\n' + link
-      }
-      // console.log(str);
-      addIndicator("您已复制所有bug链接!");
-      GM_setClipboard(str);
-    });
-  }
-
-  function addCollectBut() {
-    let interval = setInterval(() => {
-      let xxlBtn = $('.xxl_list_bug_link_btn');
-      if (xxlBtn.length == 0) {
-        collectButLinks();
-      } else {
-        clearInterval(interval);
-      }
-    }, 1000);
-  }
-
   //语雀文档
   GM_addStyle(`
     .BookReader-module_docContainer_mQ3Tk, .ant-tree-list,
@@ -247,9 +208,7 @@
       } else {
         clearInterval(interval);
         console.log("toolbar 创建了 count: " + count);
-        let btn = '<i class="aone-icon aone-medium"><div class="xxl_copy_btn_filter aone-btn aone-medium aone-btn-primary isFourCNCharBtn is-yunxiao"><span class="aone-btn-helper">导出links</span></div></i>';
-        $('.workitemList--workitemCategory--38_ZBpK').append(btn);
-        $(".xxl_copy_btn_filter").attr("style", "margin-left: 10px !important;");
+        collectButLinks();
         let filterOriginBtn = $('.aone-btn.aone-medium.aone-btn-normal.isOnlyIcon.is-yunxiao')[1];
         $(filterOriginBtn).on('click', function() {
           setTimeout(() => {
@@ -299,5 +258,34 @@
     modifyWorkbanchStyle();
   }
   modifyBugFilterStyle();
+
+
+  //复制当前页所有bug连接
+  function collectButLinks() {
+    var father = $(".km-toolbar .btn-group .btn-primary");
+    console.log("father: " + father);
+    let btn = '<i class="aone-icon aone-medium"><div class="xxl_copy_btn_filter aone-btn aone-medium aone-btn-primary isFourCNCharBtn is-yunxiao"><span class="aone-btn-helper">导出links</span></div></i>';
+    $('.workitemList--workitemCategory--38_ZBpK').append(btn);
+    $(".xxl_copy_btn_filter").attr("style", "margin-left: 10px !important;");
+    let str = "";
+    $(".xxl_copy_btn_filter").click(function () {
+      console.log("列出所有links");
+      let bugList = $('.aone-table-body tr');
+      let array = [];
+      for (let i = 0; i < bugList.length; i++) {
+        let ele = bugList[i];
+        let lastTd = $(ele).find('td').last(0);
+        // console.log(lastTd);
+        let bugId = $(lastTd).find('span').text();
+        let link = "https://work.aone.alibaba-inc.com/issue/" + bugId;
+        array[i] = link;
+        // console.log(link);
+        str = str + '\n' + link
+      }
+      // console.log(str);
+      addIndicator("您已复制所有bug链接!");
+      GM_setClipboard(str);
+    });
+  }
 
 })();

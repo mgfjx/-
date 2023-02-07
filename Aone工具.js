@@ -9,6 +9,7 @@
 // @match        https://aone.alibaba-inc.com/v2/project/*
 // @match        https://aone.alibaba-inc.com/v2
 // @match        https://yuque.antfin-inc.com/*
+// @match        https://aone.alibaba-inc.com/v2/workitem*
 // @match        https://aone.alibaba-inc.com/project/*/issue*
 // @require      http://code.jquery.com/jquery-1.11.0.min.js
 // @grant        GM_addStyle
@@ -197,6 +198,30 @@
     }, 500);
   }
   modifyWorkbanchStyle();
+
+  function dealWorkbanchSwitch() {
+    console.log("dealWorkbanchSwitch excute.");
+    let count = 0;
+    let interval = setInterval(() => {
+      let tabs = $('.Dashboard--leftColumn--2pXTcCf .aone-card-body .aone-card-header');
+      if (tabs.length == 0) {
+        console.log("tabs 不存在 count: " + count);
+      } else {
+        console.log("tabs 创建了 count: " + count);
+        clearInterval(interval);
+        $('.aone-tabs-nav-wrap .aone-tabs-tab-inner').on('click', function() {
+          setTimeout(() => {
+            modifyWorkbanchStyle();
+          }, 200);
+        });
+      }
+      count = count + 1;
+      if (count >= 20) {
+        clearInterval(interval);
+      }
+    }, 500);
+  }
+  dealWorkbanchSwitch();
   GM_addStyle(`
     .aone-table-row-odd {
       background: #f7faf7 !important;
@@ -210,5 +235,69 @@
       background: #dae9d9 !important;
     }
   `);
+
+  //bug过滤修改
+  function modifyBugFilterStyle() {
+    console.log("modifyWorkbanchStyle excute.");
+    let count = 0;
+    let interval = setInterval(() => {
+      let toolbar = $('.topArea--workitemListTopAreaWrap--3vtibJU');
+      if (toolbar.length == 0) {
+        console.log("toolbar 不存在 count: " + count);
+      } else {
+        clearInterval(interval);
+        console.log("toolbar 创建了 count: " + count);
+        let btn = '<i class="aone-icon aone-medium"><div class="xxl_copy_btn_filter aone-btn aone-medium aone-btn-primary isFourCNCharBtn is-yunxiao"><span class="aone-btn-helper">导出links</span></div></i>';
+        $('.workitemList--workitemCategory--38_ZBpK').append(btn);
+        $(".xxl_copy_btn_filter").attr("style", "margin-left: 10px !important;");
+        let filterOriginBtn = $('.aone-btn.aone-medium.aone-btn-normal.isOnlyIcon.is-yunxiao')[1];
+        $(filterOriginBtn).on('click', function() {
+          setTimeout(() => {
+            let filterBtn = $('.filter--workitemListFilterButtons--3d0AnUP .isTwoToThreeCNCharBtn');
+            $(filterBtn).on('click', function() {
+              setTimeout(() => {
+                afterClickedFilterBtn();
+              }, 200);
+            });
+          }, 1000);
+        });
+      }
+      count = count + 1;
+      if (count >= 20) {
+        clearInterval(interval);
+      }
+    }, 500);
+  }
+
+  //列表分组是否加载完成
+  function modifyGroupStyle() {
+    console.log("modifyGroupStyle excute.");
+    let count = 0;
+    let interval = setInterval(() => {
+      let group = $('.aone-tabs-nav-wrap');
+      if (group.length == 0) {
+        console.log("group 不存在 count: " + count);
+      } else {
+        clearInterval(interval);
+        console.log("group 创建了 count: " + count);
+        $('.aone-tabs-nav-wrap li').on('click', function() {
+          setTimeout(() => {
+            afterClickedFilterBtn();
+          }, 500);
+        });
+      }
+      count = count + 1;
+      if (count >= 20) {
+        clearInterval(interval);
+      }
+    }, 500);
+  }
+  modifyGroupStyle();
+
+  //点击过滤按钮后执行操作
+  function afterClickedFilterBtn() {
+    modifyWorkbanchStyle();
+  }
+  modifyBugFilterStyle();
 
 })();

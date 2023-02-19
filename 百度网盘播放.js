@@ -17,10 +17,5 @@
     .currentplay .video-list-thumbnail {
       border-color: #ff0000 !important;
     }
-
-    .privilege-box {
-      display: none !important;
-    }
-
   `);
 })();

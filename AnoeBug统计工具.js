@@ -22,8 +22,56 @@
   const LOG_TAG = "xxl_log_tag:";
   console.log(LOG_TAG, "油猴脚本: AnoeBug统计工具");
 
+  //弹出提示框
+  function addIndicator(title) {
+    let alert = `<div class="aone-overlay-wrapper opened" id="xxl_alert_ele"><div role="alert" aria-hidden="false" class="aone-message aone-message-success aone-toast aone-medium aone-title-content aone-overlay-inner aone-message-wrapper " style="position: absolute; left: 793px; top: 30px;"><i class="aone-icon aone-medium aone-message-symbol aone-message-symbol-icon"></i><div class="aone-message-title">
+    ${title}</div></div></div>`;
+    $("body").append(alert);
+    setTimeout(() => {
+      $('#xxl_alert_ele').fadeTo(250, 0, function () {
+        $('#xxl_alert_ele').remove();
+      });
+    }, 2500);
+  }
+
+  //添加油猴组件区域
+  function addTampermonkeyArea() {
+    console.log("addTampermonkeyArea() 执行了");
+    let workArea = '<div class="xxl_work_area"></div>';
+    let count = 0;
+    let interval = setInterval(() => {
+      let titleArea = $('#workitemDetailToolBarId #workitemTitle');
+      if (titleArea.length == 0) {
+        // console.log("titleArea 不存在 count: " + count);
+      } else {
+        console.log("titleArea 创建了 count: " + count);
+        let curWorkArea = $('.xxl_work_area');
+        if (curWorkArea.length == 0) {
+          $('#workitemDetailToolBarId').prepend(workArea);
+          $('.xxl_work_area').css({
+            backgroundColor: "#f7f7f7",
+            height: "50px",
+            float: "left",
+            display: "flex",
+            alignItems: "center",
+            paddingLeft: "10px"
+          });
+          $('.workitemDetail--workitemDetailContent--e5OG0Yq').attr("style", "padding-top: 106px !important;");
+        }
+        addCollectPageBtn();
+        addCollectBtn();
+        clearInterval(interval);
+      }
+      count = count + 1;
+      if (count >= 20) {
+        clearInterval(interval);
+      }
+    }, 240);
+  }
+  addTampermonkeyArea();
+
   function addCollectBtn() {
-    let rightToolbar = $('.toolbar--tools--3UNY7Ll');
+    let rightToolbar = $('.xxl_work_area');
     let btn = '<i class="aone-icon aone-medium xxl_list_bug_btn_li"><div class="xxl_list_bug_link_btn aone-btn aone-medium aone-btn-primary isFourCNCharBtn is-yunxiao"><span class="aone-btn-helper">添加到统计库</span></div></i>';
     $(btn).prependTo(rightToolbar);
     $(".xxl_list_bug_btn_li").attr("style", "margin-right: 5px !important;");
@@ -32,7 +80,7 @@
   }
 
   function addCollectPageBtn() {
-    let rightToolbar = $('.toolbar--tools--3UNY7Ll');
+    let rightToolbar = $('.xxl_work_area');
     let btn = '<i class="aone-icon aone-medium xxl_list_bug_btn_li"><div class="xxl_list_bug_page_btn aone-btn aone-medium aone-btn-primary isFourCNCharBtn is-yunxiao"><span class="aone-btn-helper">打开统计库</span></div></i>';
     $(btn).prependTo(rightToolbar);
     $(".xxl_list_bug_page_btn").css({});
@@ -78,6 +126,7 @@
       return;
     }
     addBugObjToLocal(bugInfoObj);
+    addIndicator("已添加到统计库!");
   }
 
   function addBugObjToLocal(bugInfoObj) {
@@ -120,8 +169,7 @@
     let xxlBtn = $(".xxl_list_bug_link_btn");
     if (xxlBtn.length == 0) {
       // console.log(LOG_TAG, '添加下载按钮!');
-      addCollectPageBtn();
-      addCollectBtn();
+
       clearInterval(interval);
     }
   }, 200);

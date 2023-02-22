@@ -22,41 +22,58 @@
 
   //弹出提示框
   function addIndicator(title) {
-    $("body").append('<div class="xxl_container"><span>' + title + '</span></div>');
-    let ele = $(".xxl_container");
-    $(ele).css({
-      backgroundColor: "antiquewhite",
-      position: "absolute",
-      top: "150px",
-      left: "-150px",
-      width: "150px",
-      textAlign: "center",
-      padding: "10px",
-      borderRadius: "10px",
-      color: "rgb(27, 105, 79)",
-      opacity: "0",
-    });
-    let display = $(ele).css("opacity");
-    $(ele).fadeTo(250, 1.0);
-    $(ele).animate({ left: "+=150px" }, 250);
+    let alert = `<div class="aone-overlay-wrapper opened" id="xxl_alert_ele"><div role="alert" aria-hidden="false" class="aone-message aone-message-success aone-toast aone-medium aone-title-content aone-overlay-inner aone-message-wrapper " style="position: absolute; left: 793px; top: 30px;"><i class="aone-icon aone-medium aone-message-symbol aone-message-symbol-icon"></i><div class="aone-message-title">
+    ${title}</div></div></div>`;
+    $("body").append(alert);
     setTimeout(() => {
-      $(ele).fadeTo(250, 0, function () {
-        $(ele).remove();
+      $('#xxl_alert_ele').fadeTo(250, 0, function () {
+        $('#xxl_alert_ele').remove();
       });
-    }, 1250);
+    }, 2500);
   }
 
-  setTimeout(() => {
-    //添加复制按钮
-    addCopyButton();
+  //添加油猴组件区域
+  function addTampermonkeyArea() {
+    console.log("addTampermonkeyArea() 执行了");
+    let workArea = '<div class="xxl_work_area"></div>';
+    let count = 0;
+    let interval = setInterval(() => {
+      let titleArea = $('#workitemDetailToolBarId #workitemTitle');
+      if (titleArea.length == 0) {
+        // console.log("titleArea 不存在 count: " + count);
+      } else {
+        console.log("titleArea 创建了 count: " + count);
+        let curWorkArea = $('.xxl_work_area');
+        if (curWorkArea.length == 0) {
+          $('#workitemDetailToolBarId').prepend(workArea);
+          $('.xxl_work_area').css({
+            backgroundColor: "#f7f7f7",
+            height: "50px",
+            float: "left",
+            display: "flex",
+            alignItems: "center",
+            paddingLeft: "10px"
+          });
+          $('.workitemDetail--workitemDetailContent--e5OG0Yq').attr("style", "padding-top: 106px !important;");
+        }
+        //添加复制按钮
+        addCopyButton();
+        clearInterval(interval);
+      }
+      count = count + 1;
+      if (count >= 20) {
+        clearInterval(interval);
+      }
+    }, 240);
+  }
+  addTampermonkeyArea();
 
-  }, 200);
-
+  //添加复制BugId和标题按钮
   function addCopyButton() {
     let url = window.location.href;
     console.log("url: " + url);
-    let rightToolbar = $('.toolbar--tools--3UNY7Ll');
-    let btn = '<i class="aone-icon aone-medium"><div class="xxl_copy_btn_v2 aone-btn aone-medium aone-btn-primary isFourCNCharBtn is-yunxiao"><span class="aone-btn-helper">复制BugId&amp;标题</span></div></i>';
+    let rightToolbar = $('.xxl_work_area');
+    let btn = '<i class="aone-icon aone-medium"><div class="xxl_copy_btn_v2 aone-btn aone-medium aone-btn-primary isFourCNCharBtn is-yunxiao"><span class="aone-btn-helper">复制Id&amp;标题</span></div></i>';
     $(btn).prependTo(rightToolbar);
     $(".xxl_copy_btn_v2").parent().on("click", function (e) {
       console.log("x: " + e.pageX + ", y: " + e.pageY);
@@ -67,7 +84,7 @@
       console.log(ele);
       let bugId = $(ele).attr('title');
       let cpStr = bugId + ' - ' + title;
-      addIndicator(`您已复制[${cpStr}]内容!`);
+      addIndicator(`已复制BugId和标题!`);
       GM_setClipboard(cpStr);
     });
   }

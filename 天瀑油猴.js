@@ -48,8 +48,11 @@
             } else {
               continue;
             }
-            markTd.style.color = color;
-            markTd.style.fontWeight = "bold";
+            for (let j = 0; j < tdElements.length; j++) {
+                const td = tdElements[j];
+                td.style.color = color;
+                td.style.fontWeight = "bold";
+            }
             markTd.style.fontSize = "17px";
           }
           clearInterval(interval);

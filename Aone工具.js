@@ -179,25 +179,52 @@
 
   function dealWorkbanchSwitch() {
     console.log("dealWorkbanchSwitch excute.");
-    let count = 0;
-    let interval = setInterval(() => {
-      let tabs = $('.Dashboard--leftColumn--2pXTcCf .aone-card-body .aone-card-header');
-      if (tabs.length == 0) {
-        console.log("tabs 不存在 count: " + count);
-      } else {
-        console.log("tabs 创建了 count: " + count);
-        clearInterval(interval);
-        $('.aone-tabs-nav-wrap .aone-tabs-tab-inner').on('click', function() {
-          setTimeout(() => {
-            modifyWorkbanchStyle();
-          }, 200);
-        });
-      }
-      count = count + 1;
-      if (count >= 20) {
-        clearInterval(interval);
-      }
-    }, 500);
+    //甘特图和列表切换
+    {
+      let count = 0;
+      let interval = setInterval(() => {
+        let tabs = $('.Dashboard--leftColumn--2pXTcCf .aone-card-body .aone-card-header');
+        if (tabs.length == 0) {
+          // console.log("tabs 不存在 count: " + count);
+        } else {
+          console.log("tabs 创建了 count: " + count);
+          clearInterval(interval);
+          $('.aone-tabs-nav-wrap .aone-tabs-tab-inner').on('click', function() {
+            setTimeout(() => {
+              modifyWorkbanchStyle();
+            }, 200);
+          });
+        }
+        count = count + 1;
+        if (count >= 20) {
+          clearInterval(interval);
+        }
+      }, 500);
+    }
+
+    //缺陷和任务切换
+    {
+      let count = 0;
+      let interval = setInterval(() => {
+        let tabs = $('.aone-tabs-nav li');
+        if (tabs.length == 0) {
+          // console.log("tabs2 不存在 count: " + count);
+        } else {
+          console.log("tabs2 创建了 count: " + count);
+          clearInterval(interval);
+          $('.aone-tabs-nav li').on('click', function() {
+            console.log("点击了");
+            setTimeout(() => {
+              modifyWorkbanchStyle();
+            }, 200);
+          });
+        }
+        count = count + 1;
+        if (count >= 20) {
+          clearInterval(interval);
+        }
+      }, 500);
+    }
   }
   dealWorkbanchSwitch();
   GM_addStyle(`
@@ -221,7 +248,7 @@
     let interval = setInterval(() => {
       let toolbar = $('.topArea--workitemListTopAreaWrap--3vtibJU');
       if (toolbar.length == 0) {
-        console.log("toolbar 不存在 count: " + count);
+        // console.log("toolbar 不存在 count: " + count);
       } else {
         clearInterval(interval);
         console.log("toolbar 创建了 count: " + count);

@@ -24,6 +24,54 @@
 
   console.log("AoneBug翻译油猴...");
 
+  //添加油猴组件区域
+  function addTampermonkeyArea() {
+    console.log("addTampermonkeyArea() 执行了");
+    let workArea = '<div class="xxl_work_area"></div>';
+    let count = 0;
+    let interval = setInterval(() => {
+      let titleArea = $('#workitemDetailToolBarId #workitemTitle');
+      if (titleArea.length == 0) {
+        // console.log("titleArea 不存在 count: " + count);
+      } else {
+        console.log("titleArea 创建了 count: " + count);
+        let curWorkArea = $('.xxl_work_area');
+        if (curWorkArea.length == 0) {
+          $('#workitemDetailToolBarId').prepend(workArea);
+          $('.xxl_work_area').css({
+            backgroundColor: "#f7f7f7",
+            height: "50px",
+            float: "left",
+            display: "flex",
+            alignItems: "center",
+            paddingLeft: "10px"
+          });
+          $('.workitemDetail--workitemDetailContent--e5OG0Yq').attr("style", "padding-top: 106px !important;");
+        }
+        //添加复制按钮
+        addOpenButton();
+        clearInterval(interval);
+      }
+      count = count + 1;
+      if (count >= 20) {
+        clearInterval(interval);
+      }
+    }, 240);
+  }
+  addTampermonkeyArea();
+
+  //添加复制BugId和标题按钮
+  function addOpenButton() {
+    let url = window.location.href;
+    console.log("url: " + url);
+    let rightToolbar = $('.xxl_work_area');
+    let btn = '<i class="aone-icon aone-medium"><div class="xxl_baidu_translate_btn aone-btn aone-medium aone-btn-primary isFourCNCharBtn is-yunxiao"><span class="aone-btn-helper">打开百度翻译</span></div></i>';
+    $(btn).prependTo(rightToolbar);
+    $(".xxl_baidu_translate_btn").parent().on("click", function (e) {
+      showHideTranslatePage()
+    });
+  }
+
   window.keyCodeObj = { keyCode: 0, time: new Date().valueOf() };
   document.onkeydown = function (event) {
     var e = event || window.event || arguments.callee.caller.arguments[0];

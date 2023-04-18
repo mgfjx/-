@@ -7,6 +7,9 @@
 // @include      https://nui.opens.alios.cn/center/demand/index
 // @include      https://nui.opens.alios.cn/center/skill/index
 // @include      https://nui.opens.alios.cn/*
+// @include      https://pre-nui.opens.alios.cn/center/demand/index
+// @include      https://pre-nui.opens.alios.cn/center/skill/index
+// @include      https://pre-nui.opens.alios.cn/*
 // @match
 // @require      http://code.jquery.com/jquery-1.11.0.min.js
 // @grant        GM_addStyle
@@ -123,7 +126,7 @@
     //选择要观察变动的节点
     const targetNode = document.body;
     // 配置观察选项
-    const config = { attributes: true, childList: true, subtree: true };
+    const config = { attributes: false, childList: true, subtree: true };
     // 当观察到变动时执行的回调函数
     const callback = function (mutationsList, observer) {
       checkMediaSkillDelay();

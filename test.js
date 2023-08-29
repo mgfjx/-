@@ -1,49 +1,9 @@
+var obj = {"album":"Growth Music Checklist","alg":"alg-music-rec_cm_openDaily_daily","appId":"a30102000000000089c0ca99b44d8e9f","artist":"[{\\\"id\\\":\\\"6CF7D1DD1B91985F0E9942D1CB6F81BD\\\",\\\"name\\\":\\\"Anson Seabra\\\"}]","audioId":"A7F2881EE91808AF65515EC858F7A577","category":"","collectId":"1003","cpId":"wangyiyun","duration":192,"gmtModify":0,"logo":"http://p1.music.126.net/asNO9FiyBAdpCfR_uYi0hQ==/109951168225938771.jpg?param=500y500","path":"","playCount":0,"playable":true,"qualityOption":"[{\\\"needVip\\\":false,\\\"name\\\":\\\"流畅品质\\\",\\\"quality\\\":\\\"1\\\"}]","title":"Peter Pan Was Right","tryPlayFlag":false,"type":"music","updateTime":"","upgradeRole":0};
+// obj = {"collectId":"1003","collectName":"每日推荐","collectType":"selfBuild#daily_recommend","cpId":"wangyiyun","songsCount":30};
+obj = {"album":"Growth Music Checklist","alg":"alg-music-rec_cm_openDaily_daily","appId":"a30102000000000089c0ca99b44d8e9f","artist":"","audioId":"A7F2881EE91808AF65515EC858F7A577","category":"","collectId":"1003","cpId":"wangyiyun","duration":192,"gmtModify":0,"logo":"http://p1.music.126.net/asNO9FiyBAdpCfR_uYi0hQ==/109951168225938771.jpg?param=500y500","path":"","playCount":0,"playable":true,"qualityOption":"","title":"Peter Pan Was Right","tryPlayFlag":false,"type":"music","updateTime":"","upgradeRole":0}
 
-function randomDate() {
-  // 随机生成0-11的数字
-  const randomMonthNum = Math.floor(Math.random() * 11) + 1;
-  // 随机生成1-30数字
-  const randomDateNum = Math.ceil(Math.random() * 30);
-  // 随机生成1-24 数字
-  const randomHourNum = Math.ceil(Math.random() * 23);
-  // 随机生成1-60 数字
-  const randomMinuteNum = Math.ceil(Math.random() * 59);
-  const randomSecondNum = Math.ceil(Math.random() * 50);
 
-  var timeDate = `${2022}-${randomMonthNum}-${randomDateNum} ${randomHourNum}:${randomMinuteNum}:${randomSecondNum}`;
-  // console.log("timeDate: " + timeDate);
-  var Time = new Date(timeDate);
-  var timestemp = Time.getTime();
-  // console.log(timestemp);
-  return timestemp;
-}
-
-function fakeData() {
-  let bugId = 0;
-  while (true) {
-    bugId = Math.floor(Math.random() * 100000000);
-    if (bugId > 10000000) {
-      break
-    }
-  }
-  let addTime = randomDate();
-  let obj = {};
-  obj.bugId = bugId;
-  obj.addTime = addTime;
-  obj.butTitle = "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】";
-  obj.resolver = "谢小龙";
-  obj.reopen = Math.floor(Math.random() * 1000) % 2 == 0;
-  obj.relReopen = Math.floor(Math.random() * 1000) % 2 == 0;
-  obj.flowed = Math.floor(Math.random() * 1000) % 2 == 0;
-  // console.log("obj: " + JSON.stringify(obj));
-  return obj;
-}
-
-fakeData();
-
-let bugList = [1, 2, 3, 4, 5, 6, 7]
-for (let i = bugList.length - 1; i >= 0; i--) {
-  let index = bugList.length - 1 - i + 1;
-  console.log("index: " + index + ", i: " + i);
-}
-
+var jsonStr = JSON.stringify(obj);
+jsonStr = "{\"album\":\"Growth Music Checklist\",\"alg\":\"alg-music-rec_cm_openDaily_daily\",\"appId\":\"a30102000000000089c0ca99b44d8e9f\",\"artist\":\"\",\"audioId\":\"A7F2881EE91808AF65515EC858F7A577\",\"category\":\"\",\"collectId\":\"1003\",\"cpId\":\"wangyiyun\",\"duration\":192,\"gmtModify\":0,\"logo\":\"http://p1.music.126.net/asNO9FiyBAdpCfR_uYi0hQ==/109951168225938771.jpg?param=500y500\",\"path\":\"\",\"playCount\":0,\"playable\":true,\"qualityOption\":\"\",\"title\":\"Peter Pan Was Right\",\"tryPlayFlag\":false,\"type\":\"music\",\"updateTime\":\"\",\"upgradeRole\":0}";
+jsonStr = jsonStr.replace(/"/g, '\\"');
+console.log(jsonStr);

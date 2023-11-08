@@ -31,20 +31,23 @@
       } else {
         var trElements = tableBodies[0].querySelectorAll("tr");
         if (!trElements || trElements.length == 0) {
-          // console.log("trElements 不存在 count: " + count);
+          console.log("trElements 不存在 count: " + count);
         } else {
-          console.log("技能列表创建了 count: " + count);
-          let skills = ["multimediaControl", "fm", "abook", "music", "xinger", "online_video", "iqiyi", "bilibili", "car_video"];
+          console.log("技能列表创建了 count: " + count + ", trElements.length: " + trElements.length);
+          let skills = ["multimediaControl", "fm", "abook", "music", "xinger", "online_video", "iqiyi", "bilibili", "car_video", "scenemode", "kknews"];
           let colors = ["red", "green", "purple", "blue", "orange"];
+          let colorIndex = 0;
           for (var i = 0; i < trElements.length; i++) {
             var tdElements = trElements[i].querySelectorAll("td");
             // tdElements.style.background = "#ff00ff";
-            var divContent = tdElements[2].querySelector("div").innerHTML;
+            var divContent = tdElements[1].querySelector("div").innerHTML;
+            // console.log('divContent : ' + divContent);
             var markTd = tdElements[1];
             //判断多媒体技能
             let color = "";
             if (skills.includes(divContent)) {
-              color = colors[i%colors.length];
+              color = colors[colorIndex%colors.length];
+              colorIndex++;
             } else {
               continue;
             }

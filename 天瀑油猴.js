@@ -38,6 +38,21 @@
           let colors = ["red", "green", "purple", "blue", "orange"];
           let colorIndex = 0;
           for (var i = 0; i < trElements.length; i++) {
+
+            //添加点击事件
+            var currentTr = trElements[i];
+            currentTr.style.cursor = "pointer";
+            currentTr.onclick = function (e) {
+              console.log("点击tr e: ", e.target.nodeName);
+              if (e.target.nodeName == "BUTTON") {
+                return;
+              }
+              var tr = $(e.target).closest("tr");
+              var detailTd = $(tr).find("button");
+              detailTd[0].click();
+            };
+
+            //修改技能样式
             var tdElements = trElements[i].querySelectorAll("td");
             // tdElements.style.background = "#ff00ff";
             var divContent = tdElements[1].querySelector("div").innerHTML;
@@ -51,18 +66,6 @@
             } else {
               continue;
             }
-            var currentTr = trElements[i];
-            currentTr.style.cursor = "pointer";
-            currentTr.onclick = function (e) {
-              console.log("点击tr e: ", e.target.nodeName);
-              if (e.target.nodeName == "BUTTON") {
-                return;
-              }
-              var tr = $(e.target).closest("tr");
-              var detailTd = $(tr).find("button");
-              detailTd[0].click();
-            };
-
             for (let j = 0; j < tdElements.length; j++) {
               const td = tdElements[j];
               td.style.color = color;

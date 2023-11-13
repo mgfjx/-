@@ -58,10 +58,8 @@
               if (e.target.nodeName == "BUTTON") {
                 return;
               }
-              var td = e.target.parentNode;
-              var tr = td.parentNode;
-              var tdElements = tr.querySelectorAll("td");
-              var detailTd = tdElements[8].querySelectorAll("button");
+              var tr = $(e.target).closest("tr");
+              var detailTd = $(tr).find("button");
               detailTd[0].click();
             };
 

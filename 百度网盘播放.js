@@ -17,5 +17,8 @@
     .currentplay .video-list-thumbnail {
       border-color: #ff0000 !important;
     }
+    .video-main, #video-player {
+      width: 100%  !important;
+    }
   `);
 })();

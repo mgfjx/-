@@ -1,49 +1,117 @@
+class MyURLProtocol: NSURLProtocol {
 
-function randomDate() {
-  // 随机生成0-11的数字
-  const randomMonthNum = Math.floor(Math.random() * 11) + 1;
-  // 随机生成1-30数字
-  const randomDateNum = Math.ceil(Math.random() * 30);
-  // 随机生成1-24 数字
-  const randomHourNum = Math.ceil(Math.random() * 23);
-  // 随机生成1-60 数字
-  const randomMinuteNum = Math.ceil(Math.random() * 59);
-  const randomSecondNum = Math.ceil(Math.random() * 50);
-
-  var timeDate = `${2022}-${randomMonthNum}-${randomDateNum} ${randomHourNum}:${randomMinuteNum}:${randomSecondNum}`;
-  // console.log("timeDate: " + timeDate);
-  var Time = new Date(timeDate);
-  var timestemp = Time.getTime();
-  // console.log(timestemp);
-  return timestemp;
-}
-
-function fakeData() {
-  let bugId = 0;
-  while (true) {
-    bugId = Math.floor(Math.random() * 100000000);
-    if (bugId > 10000000) {
-      break
-    }
+  override class func canInitWithRequest(request: NSURLRequest) -> Bool {
+      // 在这里可以对请求进行过滤或判断，决定是否要拦截
+      return true // 拦截所有请求
   }
-  let addTime = randomDate();
-  let obj = {};
-  obj.bugId = bugId;
-  obj.addTime = addTime;
-  obj.butTitle = "【TV-993】【多媒体】A2或者B屏幕上滑动选择FM台时，每次手放掉会先显示上个电台再回到选中电台【董晨晨】";
-  obj.resolver = "谢小龙";
-  obj.reopen = Math.floor(Math.random() * 1000) % 2 == 0;
-  obj.relReopen = Math.floor(Math.random() * 1000) % 2 == 0;
-  obj.flowed = Math.floor(Math.random() * 1000) % 2 == 0;
-  // console.log("obj: " + JSON.stringify(obj));
-  return obj;
+
+  override class func canonicalRequestForRequest(request: NSURLRequest) -> NSURLRequest {
+      return request
+  }
+
+  override func startLoading() {
+      // 在这里可以处理请求，比如修改请求头或响应内容等
+      let response = NSHTTPURLResponse(URL: self.request.URL!, statusCode: 200, HTTPVersion: "HTTP/1.1", headerFields: nil)!
+      self.client?.URLProtocol(self, didReceiveResponse: response, cacheStoragePolicy: .NotAllowed)
+      self.client?.URLProtocolDidFinishLoading(self)
+  }
+
+  override func stopLoading() {
+      // 可以在这里停止请求或释放一些资源
+  }
+
 }
 
-fakeData();
+NSURLProtocol.registerClass(MyURLProtocol.self)
 
-let bugList = [1, 2, 3, 4, 5, 6, 7]
-for (let i = bugList.length - 1; i >= 0; i--) {
-  let index = bugList.length - 1 - i + 1;
-  console.log("index: " + index + ", i: " + i);
+
+class MyURLProtocol: URLProtocol {
+
+  override class func canInit(with request: URLRequest) -> Bool {
+      // 在这里可以对请求进行过滤或判断，决定是否要拦截
+      return true // 拦截所有请求
+  }
+
+  override class func canonicalRequest(for request: URLRequest) -> URLRequest {
+      return request
+  }
+
+  override func startLoading() {
+      // 在这里可以处理请求，比如修改请求头或响应内容等
+      let response = HTTPURLResponse(url: self.request.url!, statusCode: 200, httpVersion: "HTTP/1.1", headerFields: nil)!
+      self.client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
+      self.client?.urlProtocolDidFinishLoading(self)
+  }
+
+  override func stopLoading() {
+      // 可以在这里停止请求或释放一些资源
+  }
+
 }
 
+URLProtocol.registerClass(MyURLProtocol.self)
+
+
+
+class MyURLProtocol: URLProtocol, URLSessionDataDelegate {
+
+  var session: URLSession?
+  var task: URLSessionDataTask?
+  var data: NSMutableData?
+  var response: URLResponse?
+
+  override class func canInit(with request: URLRequest) -> Bool {
+      // 判断是否要拦截该请求
+      return true
+  }
+
+  override class func canonicalRequest(for request: URLRequest) -> URLRequest {
+      return request
+  }
+
+  override func startLoading() {
+      // 创建一个新的会话对象
+      let config = URLSessionConfiguration.default
+      session = URLSession(configuration: config, delegate: self, delegateQueue: nil)
+
+      // 创建一个新的请求任务并开始
+      task = session?.dataTask(with: self.request)
+      task?.resume()
+  }
+
+  override func stopLoading() {
+      // 停止请求任务
+      task?.cancel()
+  }
+
+  // MARK: - URLSessionDataDelegate
+
+  func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
+      // 接收到数据时的回调，将数据写入缓存
+      self.client?.urlProtocol(self, didLoad: data)
+      self.data?.append(data)
+  }
+
+  func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+      // 请求完成时的回调，将缓存中的数据发送给客户端
+      if error != nil {
+          self.client?.urlProtocol(self, didFailWithError: error!)
+      } else {
+          if let response = self.response {
+              self.client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
+          }
+          if let data = self.data {
+              self.client?.urlProtocol(self, didLoad: data as Data)
+          }
+          self.client?.urlProtocolDidFinishLoading(self)
+      }
+  }
+
+  func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive response: URLResponse) {
+      // 收到响应时的回调，保存响应对象
+      self.client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
+      self.response = response
+      self.data = NSMutableData()
+  }
+
+}

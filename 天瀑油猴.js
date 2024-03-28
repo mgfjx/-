@@ -38,20 +38,6 @@
           let colors = ["red", "green", "purple", "blue", "orange"];
           let colorIndex = 0;
           for (var i = 0; i < trElements.length; i++) {
-
-            //添加点击事件
-            var currentTr = trElements[i];
-            currentTr.style.cursor = "pointer";
-            currentTr.onclick = function (e) {
-              console.log("点击tr e: ", e.target.nodeName);
-              if (e.target.nodeName == "BUTTON") {
-                return;
-              }
-              var tr = $(e.target).closest("tr");
-              var detailTd = $(tr).find("button");
-              detailTd[0].click();
-            };
-
             //修改技能样式
             var tdElements = trElements[i].querySelectorAll("td");
             // tdElements.style.background = "#ff00ff";
@@ -71,7 +57,20 @@
               td.style.color = color;
               td.style.fontWeight = "bold";
             }
-            markTd.style.fontSize = "17px";
+            // markTd.style.fontSize = "17px";
+
+            //添加点击事件
+            var currentTr = trElements[i];
+            currentTr.style.cursor = "pointer";
+            currentTr.onclick = function (e) {
+              console.log("点击tr e: ", e.target.nodeName);
+              if (e.target.nodeName == "BUTTON") {
+                return;
+              }
+              var tr = $(e.target).closest("tr");
+              var detailTd = $(tr).find("button");
+              detailTd[0].click();
+            };
           }
           clearInterval(interval);
         }
@@ -82,34 +81,6 @@
       }
     }, 240);
   }
-  // findMultimediaSkill();
-
-  /*
-  //添加点击事件
-  function findTabMenu() {
-    console.log("findTabMenu() 执行了");
-    let count = 0;
-    let interval = setInterval(() => {
-      var parentElement = document.querySelector(
-        "#app > section > main > div > section > aside > ul > li:nth-child(4) > ul > div"
-      );
-      if (!parentElement || parentElement.length == 0) {
-        // console.log("tatableListble 不存在 count: " + count);
-      } else {
-        console.log("menu tab创建了 count: " + count);
-        parentElement.addEventListener("click", function (event) {
-          findMultimediaSkill();
-        });
-        clearInterval(interval);
-      }
-      count = count + 1;
-      if (count >= 50) {
-        clearInterval(interval);
-      }
-    }, 240);
-  }
-  findTabMenu();
-  */
 
   function checkMediaSkillDelay() {
     // console.log("dom change date: ", Date.now());

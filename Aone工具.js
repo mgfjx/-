@@ -77,13 +77,18 @@
     $(btn).prependTo(rightToolbar);
     $(".xxl_copy_btn_v2").parent().on("click", function (e) {
       console.log("x: " + e.pageX + ", y: " + e.pageY);
+      //标题
       let title = $('#workitemTitle').text();
       let items = $('.AttributeFormat--attributeItem--14pG5s3 .AttributeFormat--displayText--1Banb6j');
       if (items.length == 0) return;
       let ele = items[0];
       console.log(ele);
+      //bugId
       let bugId = $(ele).attr('title');
-      let cpStr = bugId + ' - ' + title;
+      //项目
+      let project = $('#aoneTopbarContainer .aoneTopbar-select-values em').attr('title');
+
+      let cpStr = "Bug: " + bugId + ' - ' + project + ' - ' + title;
       addIndicator(`已复制BugId和标题!`);
       GM_setClipboard(cpStr);
     });

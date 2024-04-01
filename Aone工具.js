@@ -308,14 +308,18 @@
   function collectButLinks() {
     var father = $(".km-toolbar .btn-group .btn-primary");
     console.log("father: " + father);
+
+    //导出link按钮
     let btn = '<i class="aone-icon aone-medium"><div class="xxl_copy_btn_filter aone-btn aone-medium aone-btn-primary isFourCNCharBtn is-yunxiao"><span class="aone-btn-helper">导出links</span></div></i>';
     $('.workitemList--workitemCategory--38_ZBpK').append(btn);
     $(".xxl_copy_btn_filter").attr("style", "margin-left: 10px !important;");
-    let str = "";
+
+    //点击导出link按钮
     $(".xxl_copy_btn_filter").click(function () {
       console.log("列出所有links");
       let bugList = $('.aone-table-body tr');
       let array = [];
+      let str = "";
       for (let i = 0; i < bugList.length; i++) {
         let ele = bugList[i];
         let lastTd = $(ele).find('td').last(0);
@@ -330,6 +334,43 @@
       addIndicator("您已复制所有bug链接!");
       GM_setClipboard(str);
     });
+
+    {
+      //导出link按钮
+      let btn = '<i class="aone-icon aone-medium"><div class="xxl_copy_id_title_btn_filter aone-btn aone-medium aone-btn-primary isFourCNCharBtn is-yunxiao"><span class="aone-btn-helper">导出id&title</span></div></i>';
+      $('.workitemList--workitemCategory--38_ZBpK').append(btn);
+      $(".xxl_copy_id_title_btn_filter").attr("style", "margin-left: 10px !important;");
+
+      //点击导出link按钮
+      $(".xxl_copy_id_title_btn_filter").click(function () {
+        console.log("列出所有links");
+        let bugList = $('.aone-table-body tr');
+        let count = 0;
+        let str = "";
+        for (let i = 0; i < bugList.length; i++) {
+          let ele = bugList[i];
+          let titleTd = $(ele).find('td').first();
+          let statusTd = $(ele).find('td').eq(1);
+          let lastTd = $(ele).find('td').last();
+
+          let title = $(titleTd).find('span').text();
+          let status = $(statusTd).find('span').text();
+          let bugId = $(lastTd).find('span').text();
+
+          let tastStr = bugId + " - " + status + " - " + title;
+          console.log(tastStr);
+          if (str.length > 0) {
+            str = str + '\n' + tastStr;
+          } else {
+            str = tastStr;
+          }
+          count = count + 1;
+        }
+        // console.log(str);
+        addIndicator("您已复制" + count + "个id和标题!");
+        GM_setClipboard(str);
+      });
+    }
   }
 
 })();

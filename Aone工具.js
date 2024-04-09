@@ -11,6 +11,8 @@
 // @match        https://yuque.antfin-inc.com/*
 // @match        https://aone.alibaba-inc.com/v2/workitem*
 // @match        https://aone.alibaba-inc.com/project/*/issue*
+// @match        https://aone.alibaba-inc.com/project/*/task*
+// @match        https://aone.alibaba-inc.com/v2/task*
 // @require      http://code.jquery.com/jquery-1.11.0.min.js
 // @grant        GM_addStyle
 // @grant        GM_setClipboard
@@ -83,12 +85,21 @@
       if (items.length == 0) return;
       let ele = items[0];
       console.log(ele);
+      let typeItem = items[1];
+      console.log('typeItem: ', typeItem);
+      //类型
+      let type = $(typeItem).text();
+      console.log('type: ' + type);
+      let preTag = "Bug: ";
+      if (type == "任务") {
+        preTag = "Task: ";
+      }
       //bugId
       let bugId = $(ele).attr('title');
       //项目
       let project = $('#aoneTopbarContainer .aoneTopbar-select-values em').attr('title');
 
-      let cpStr = "Bug: " + bugId + ' - ' + project + ' - ' + title;
+      let cpStr = preTag + bugId + ' - ' + project + ' - ' + title;
       addIndicator(`已复制BugId和标题!`);
       GM_setClipboard(cpStr);
     });

@@ -13,6 +13,8 @@
 // @match
 // @require      http://code.jquery.com/jquery-1.11.0.min.js
 // @grant        GM_addStyle
+// @grant        GM_setValue
+// @grant        GM_getValue
 
 // ==/UserScript==
 
@@ -25,6 +27,29 @@
     console.log("findMultimediaSkill() 执行了");
     let count = 0;
     let interval = setInterval(() => {
+      if ($('div[data-v-7075f91e]').length <= 0) {
+        console.log('不是技能列表页.');
+        clearInterval(interval);
+        return;
+      }
+      //添加勾选框
+      let showOnlyMySkill = GM_getValue("xxlonlyMySkill", true);
+      if ($("#xxlonlyMySkill").length <= 0) {
+        $(".routerContainer").append(`
+        <div id='xxlonlyMySkill' style='margin-left: 30px; display: flex; justify-content: cneter; align-items: center; cursor: pointer;'>
+          <input type='checkbox' />
+          <span style='margin-left: 5px; font-size: 14px;'>只显示我的技能</span>
+        </div>
+        `);
+        $("#xxlonlyMySkill input").prop("checked", showOnlyMySkill);
+        $("#xxlonlyMySkill").click(function () {
+          let checked = $("#xxlonlyMySkill input").prop("checked");
+          $("#xxlonlyMySkill input").prop("checked", !checked);
+          console.log("点击了只显示我的技能, checked: ", !checked);
+          GM_setValue("xxlonlyMySkill", !checked);
+          location.reload();
+        });
+      }
       var tableBodies = document.querySelectorAll(".el-table__body");
       if (!tableBodies || tableBodies.length == 0) {
         // console.log("tatableListble 不存在 count: " + count);
@@ -39,10 +64,10 @@
           let colorIndex = 0;
           for (var i = 0; i < trElements.length; i++) {
             //修改技能样式
-            var tdElements = trElements[i].querySelectorAll("td");
+            var tdElements = $(trElements[i]).find("td");
             // tdElements.style.background = "#ff00ff";
-            var divContent = tdElements[1].querySelector("div").innerHTML;
-            // console.log('divContent : ' + divContent);
+            var divContent = $(tdElements[1]).find("div").text();
+            console.log('divContent : ' + divContent);
             var markTd = tdElements[1];
             //判断多媒体技能
             let color = "";
@@ -50,6 +75,9 @@
               color = colors[colorIndex%colors.length];
               colorIndex++;
             } else {
+              if (showOnlyMySkill) {
+                $(tdElements).remove();
+              }
               continue;
             }
             for (let j = 0; j < tdElements.length; j++) {
@@ -72,6 +100,7 @@
               detailTd[0].click();
             };
           }
+          console.log("技能列表创建完成 count: " + count);
           clearInterval(interval);
         }
       }

@@ -21,13 +21,19 @@
 (function () {
   "use strict";
   console.log("天瀑油猴...");
+  //我维护的技能
+  let skills = [
+    "multimediaControl", "fm", "abook", "music",
+    "xinger", "online_video", "iqiyi", "bilibili",
+    "car_video", "kknews"
+  ];
 
   //查找多媒体技能
   function findMultimediaSkill() {
     console.log("findMultimediaSkill() 执行了");
     let count = 0;
     let interval = setInterval(() => {
-      if ($('div[data-v-7075f91e]').length <= 0) {
+      if ($('div[data-v-7075f91e]').length <= 0 && $('div[data-v-4b72247e]').length <= 0) {
         console.log('不是技能列表页.');
         clearInterval(interval);
         return;
@@ -59,9 +65,9 @@
           console.log("trElements 不存在 count: " + count);
         } else {
           console.log("技能列表创建了 count: " + count + ", trElements.length: " + trElements.length);
-          let skills = ["multimediaControl", "fm", "abook", "music", "xinger", "online_video", "iqiyi", "bilibili", "car_video", "scenemode", "kknews"];
           let colors = ["red", "green", "purple", "blue", "orange"];
           let colorIndex = 0;
+          let mySkillCount = 0;
           for (var i = 0; i < trElements.length; i++) {
             //修改技能样式
             var tdElements = $(trElements[i]).find("td");
@@ -74,6 +80,7 @@
             if (skills.includes(divContent)) {
               color = colors[colorIndex%colors.length];
               colorIndex++;
+              mySkillCount ++;
             } else {
               if (showOnlyMySkill) {
                 $(tdElements).remove();
@@ -100,7 +107,8 @@
               detailTd[0].click();
             };
           }
-          console.log("技能列表创建完成 count: " + count);
+          // let topSpan = $("#xxlonlyMySkill span");
+          // topSpan.text(topSpan.text() + " (" + mySkillCount + "个)");
           clearInterval(interval);
         }
       }

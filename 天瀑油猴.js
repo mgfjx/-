@@ -33,25 +33,29 @@
     console.log("findMultimediaSkill() 执行了");
     let count = 0;
     let interval = setInterval(() => {
-      if ($('div[data-v-7075f91e]').length <= 0 && $('div[data-v-4b72247e]').length <= 0) {
+      if ($('div[data-v-2c48e1a1]').length <= 0 && $('div[data-v-58995d8a]').length <= 0) {
         console.log('不是技能列表页.');
         clearInterval(interval);
         return;
       }
       //添加勾选框
       let showOnlyMySkill = GM_getValue("xxlonlyMySkill", true);
+      console.log("showOnlyMySkill: ", showOnlyMySkill);
+      //获取搜索框内容
+      let searchContent = $('.el-input__inner').val().trim();
+      console.log('searchContent : ' + searchContent);
       if ($("#xxlonlyMySkill").length <= 0) {
         $(".routerContainer").append(`
         <div id='xxlonlyMySkill' style='margin-left: 30px; display: flex; justify-content: cneter; align-items: center; cursor: pointer;'>
-          <input type='checkbox' />
+          <input type='checkbox' style='pointer-events: none;' />
           <span style='margin-left: 5px; font-size: 14px;'>只显示我的技能</span>
         </div>
         `);
         $("#xxlonlyMySkill input").prop("checked", showOnlyMySkill);
         $("#xxlonlyMySkill").click(function () {
           let checked = $("#xxlonlyMySkill input").prop("checked");
+          console.log("点击了只显示我的技能, checked: ", checked);
           $("#xxlonlyMySkill input").prop("checked", !checked);
-          console.log("点击了只显示我的技能, checked: ", !checked);
           GM_setValue("xxlonlyMySkill", !checked);
           location.reload();
         });
@@ -73,7 +77,7 @@
             var tdElements = $(trElements[i]).find("td");
             // tdElements.style.background = "#ff00ff";
             var divContent = $(tdElements[1]).find("div").text();
-            console.log('divContent : ' + divContent);
+            // console.log('divContent : ' + divContent);
             var markTd = tdElements[1];
             //判断多媒体技能
             let color = "";
@@ -82,7 +86,8 @@
               colorIndex++;
               mySkillCount ++;
             } else {
-              if (showOnlyMySkill) {
+              if (showOnlyMySkill && searchContent.length <= 0) {
+                console.log("不显示我的技能");
                 $(tdElements).remove();
               }
               continue;

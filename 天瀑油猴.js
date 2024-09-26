@@ -25,7 +25,8 @@
   let skills = [
     "multimediaControl", "fm", "abook", "music",
     "xinger", "online_video", "iqiyi", "bilibili",
-    "car_video", "kknews"
+    "car_video", "kknews", "scenemode", "srvvoice",
+    "phonelink",
   ];
 
   //查找多媒体技能

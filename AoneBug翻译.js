@@ -7,7 +7,9 @@
 // @include
 // @match        https://work.aone.alibaba-inc.com/issue/*
 // @match        https://aone.alibaba-inc.com/v2/bug/*
+// @match        https://project.aone.alibaba-inc.com/v2/bug/*
 // @match        https://aone.alibaba-inc.com/v2/project/*/bug/*
+// @match        https://project.aone.alibaba-inc.com/v2/project/*/bug/*
 // @require      http://code.jquery.com/jquery-1.11.0.min.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js
 // @grant        GM_addStyle
@@ -256,65 +258,31 @@
   function initData() {
     let url = window.location.href;
     console.log("url: " + url);
-    let res = url.indexOf("https://aone.alibaba-inc.com/v2");
-    //新版Aone
-    if (res == 0) {
-      let bugIdTitle = $(".xl_ab_itemContainer_1 p").text();
-      console.log("bugtitle: " + bugIdTitle);
-      if (bugIdTitle.length <= "BugID:".length) {
-        //说明翻译页面未打开过，需要再设置默认值
-        let bugId = getBugId();
-        if (!bugId || bugId.length == 0) {
-          return;
-        }
-        //查找本地缓存
-        let saveObj = GM_getValue("GAone", {});
-        let currentObj = saveObj[bugId];
-        $(".xl_ab_itemContainer_1 p").text("BugID:" + bugId);
-        if (!currentObj) {
-          $(".xl_ab_itemContainer_4").find("textarea").val("Test at latest version.");
-          let title = $(".workItemTitle--workitemTextInput--2V6YDlV").val();
-          console.log("title: " + title);
-          if (title && title.length > 0) {
-            $(".xl_ab_itemContainer_1 .xl_ab_query").val(title);
-            translateText(title, (resultText) => {
-              $(".xl_ab_itemContainer_1").find(".xl_ab_result").val(resultText);
-              updateResult();
-            });
-          }
-        } else {
-          fillInputsByObj(currentObj);
-        }
+    let bugIdTitle = $(".xl_ab_itemContainer_1 p").text();
+    console.log("bugtitle: " + bugIdTitle);
+    if (bugIdTitle.length <= "BugID:".length) {
+      //说明翻译页面未打开过，需要再设置默认值
+      let bugId = getBugId();
+      if (!bugId || bugId.length == 0) {
+        return;
       }
-    } else {
-      //旧版Anoe
-      let bugIdTitle = $(".xl_ab_itemContainer_1 p").text();
-      console.log("bugIdTitle: " + bugIdTitle);
-      if (bugIdTitle.length <= "BugID:".length) {
-        //说明翻译页面未打开过，需要再设置默认值
-        let bugId = $(".detail-basic-id").text();
-        if (!bugId || bugId.length == 0) {
-          console.log('bug id 为空!');
-          return;
+      //查找本地缓存
+      let saveObj = GM_getValue("GAone", {});
+      let currentObj = saveObj[bugId];
+      $(".xl_ab_itemContainer_1 p").text("BugID:" + bugId);
+      if (!currentObj) {
+        $(".xl_ab_itemContainer_4").find("textarea").val("Test at latest version.");
+        let title = $(".workItemTitle--workitemTextInput--2V6YDlV").val();
+        console.log("title: " + title);
+        if (title && title.length > 0) {
+          $(".xl_ab_itemContainer_1 .xl_ab_query").val(title);
+          translateText(title, (resultText) => {
+            $(".xl_ab_itemContainer_1").find(".xl_ab_result").val(resultText);
+            updateResult();
+          });
         }
-        //查找本地缓存
-        let saveObj = GM_getValue("GAone", {});
-        let currentObj = saveObj[bugId];
-        $(".xl_ab_itemContainer_1 p").text("BugID:" + bugId);
-        if (!currentObj) {
-          $(".xl_ab_itemContainer_4").find("textarea").val("Test at latest version.");
-          let title = $(".detail-content .next-card-title div span").text();
-          console.log("title: " + title);
-          if (title && title.length > 0) {
-            $(".xl_ab_itemContainer_1 .xl_ab_query").val(title);
-            translateText(title, (resultText) => {
-              $(".xl_ab_itemContainer_1").find(".xl_ab_result").val(resultText);
-              updateResult();
-            });
-          }
-        } else {
-          fillInputsByObj(currentObj);
-        }
+      } else {
+        fillInputsByObj(currentObj);
       }
     }
   }

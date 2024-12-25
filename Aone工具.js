@@ -5,7 +5,8 @@
 // @description  Aone工具
 // @author       You
 // @match        https://work.aone.alibaba-inc.com/issue/*
-// @match        https://aone.alibaba-inc.com/v2/bug/*
+// @include      https://*.alibaba-inc.com/v2/bug/*
+// @include      https://*.alibaba-inc.com/v2/project/*/bug/*
 // @match        https://aone.alibaba-inc.com/v2/project/*
 // @match        https://aone.alibaba-inc.com/v2
 // @match        https://yuque.antfin-inc.com/*

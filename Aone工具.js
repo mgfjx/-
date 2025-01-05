@@ -5,12 +5,15 @@
 // @description  Aone工具
 // @author       You
 // @match        https://work.aone.alibaba-inc.com/issue/*
-// @match        https://aone.alibaba-inc.com/v2/bug/*
+// @include      https://*.alibaba-inc.com/v2/bug/*
+// @include      https://*.alibaba-inc.com/v2/project/*/bug/*
 // @match        https://aone.alibaba-inc.com/v2/project/*
 // @match        https://aone.alibaba-inc.com/v2
 // @match        https://yuque.antfin-inc.com/*
 // @match        https://aone.alibaba-inc.com/v2/workitem*
 // @match        https://aone.alibaba-inc.com/project/*/issue*
+// @match        https://aone.alibaba-inc.com/project/*/task*
+// @match        https://aone.alibaba-inc.com/v2/task*
 // @require      http://code.jquery.com/jquery-1.11.0.min.js
 // @grant        GM_addStyle
 // @grant        GM_setClipboard
@@ -22,52 +25,83 @@
 
   //弹出提示框
   function addIndicator(title) {
-    $("body").append('<div class="xxl_container"><span>' + title + '</span></div>');
-    let ele = $(".xxl_container");
-    $(ele).css({
-      backgroundColor: "antiquewhite",
-      position: "absolute",
-      top: "150px",
-      left: "-150px",
-      width: "150px",
-      textAlign: "center",
-      padding: "10px",
-      borderRadius: "10px",
-      color: "rgb(27, 105, 79)",
-      opacity: "0",
-    });
-    let display = $(ele).css("opacity");
-    $(ele).fadeTo(250, 1.0);
-    $(ele).animate({ left: "+=150px" }, 250);
+    let alert = `<div class="aone-overlay-wrapper opened" id="xxl_alert_ele"><div role="alert" aria-hidden="false" class="aone-message aone-message-success aone-toast aone-medium aone-title-content aone-overlay-inner aone-message-wrapper " style="position: absolute; left: 793px; top: 30px;"><i class="aone-icon aone-medium aone-message-symbol aone-message-symbol-icon"></i><div class="aone-message-title">
+    ${title}</div></div></div>`;
+    $("body").append(alert);
     setTimeout(() => {
-      $(ele).fadeTo(250, 0, function () {
-        $(ele).remove();
+      $('#xxl_alert_ele').fadeTo(250, 0, function () {
+        $('#xxl_alert_ele').remove();
       });
-    }, 1250);
+    }, 2500);
   }
 
-  setTimeout(() => {
-    //添加复制按钮
-    addCopyButton();
+  //添加油猴组件区域
+  function addTampermonkeyArea() {
+    console.log("addTampermonkeyArea() 执行了");
+    let workArea = '<div class="xxl_work_area"></div>';
+    let count = 0;
+    let interval = setInterval(() => {
+      let titleArea = $('#workitemDetailToolBarId #workitemTitle');
+      if (titleArea.length == 0) {
+        // console.log("titleArea 不存在 count: " + count);
+      } else {
+        console.log("titleArea 创建了 count: " + count);
+        let curWorkArea = $('.xxl_work_area');
+        if (curWorkArea.length == 0) {
+          $('#workitemDetailToolBarId').prepend(workArea);
+          $('.xxl_work_area').css({
+            backgroundColor: "#f7f7f7",
+            height: "50px",
+            float: "left",
+            display: "flex",
+            alignItems: "center",
+            paddingLeft: "10px"
+          });
+          $('.workitemDetail--workitemDetailContent--e5OG0Yq').attr("style", "padding-top: 106px !important;");
+        }
+        //添加复制按钮
+        addCopyButton();
+        clearInterval(interval);
+      }
+      count = count + 1;
+      if (count >= 20) {
+        clearInterval(interval);
+      }
+    }, 240);
+  }
+  addTampermonkeyArea();
 
-  }, 200);
-
+  //添加复制BugId和标题按钮
   function addCopyButton() {
     let url = window.location.href;
     console.log("url: " + url);
-    let rightToolbar = $('.toolbar--tools--3UNY7Ll');
-    let btn = '<i class="aone-icon aone-medium"><div class="xxl_copy_btn_v2 aone-btn aone-medium aone-btn-primary isFourCNCharBtn is-yunxiao"><span class="aone-btn-helper">复制BugId&amp;标题</span></div></i>';
+    let rightToolbar = $('.xxl_work_area');
+    let btn = '<i class="aone-icon aone-medium"><div class="xxl_copy_btn_v2 aone-btn aone-medium aone-btn-primary isFourCNCharBtn is-yunxiao"><span class="aone-btn-helper">复制Id&amp;标题</span></div></i>';
     $(btn).prependTo(rightToolbar);
     $(".xxl_copy_btn_v2").parent().on("click", function (e) {
       console.log("x: " + e.pageX + ", y: " + e.pageY);
+      //标题
       let title = $('#workitemTitle').text();
       let items = $('.AttributeFormat--attributeItem--14pG5s3 .AttributeFormat--displayText--1Banb6j');
       if (items.length == 0) return;
       let ele = items[0];
       console.log(ele);
+      let typeItem = items[1];
+      console.log('typeItem: ', typeItem);
+      //类型
+      let type = $(typeItem).text();
+      console.log('type: ' + type);
+      let preTag = "Bug: ";
+      if (type == "任务") {
+        preTag = "Task: ";
+      }
+      //bugId
       let bugId = $(ele).attr('title');
-      let cpStr = bugId + ' - ' + title;
-      addIndicator(`您已复制[${cpStr}]内容!`);
+      //项目
+      let project = $('#aoneTopbarContainer .aoneTopbar-select-values em').attr('title');
+
+      let cpStr = preTag + bugId + ' - ' + project + ' - ' + title;
+      addIndicator(`已复制BugId和标题!`);
       GM_setClipboard(cpStr);
     });
   }
@@ -162,25 +196,52 @@
 
   function dealWorkbanchSwitch() {
     console.log("dealWorkbanchSwitch excute.");
-    let count = 0;
-    let interval = setInterval(() => {
-      let tabs = $('.Dashboard--leftColumn--2pXTcCf .aone-card-body .aone-card-header');
-      if (tabs.length == 0) {
-        console.log("tabs 不存在 count: " + count);
-      } else {
-        console.log("tabs 创建了 count: " + count);
-        clearInterval(interval);
-        $('.aone-tabs-nav-wrap .aone-tabs-tab-inner').on('click', function() {
-          setTimeout(() => {
-            modifyWorkbanchStyle();
-          }, 200);
-        });
-      }
-      count = count + 1;
-      if (count >= 20) {
-        clearInterval(interval);
-      }
-    }, 500);
+    //甘特图和列表切换
+    {
+      let count = 0;
+      let interval = setInterval(() => {
+        let tabs = $('.Dashboard--leftColumn--2pXTcCf .aone-card-body .aone-card-header');
+        if (tabs.length == 0) {
+          // console.log("tabs 不存在 count: " + count);
+        } else {
+          console.log("tabs 创建了 count: " + count);
+          clearInterval(interval);
+          $('.aone-tabs-nav-wrap .aone-tabs-tab-inner').on('click', function() {
+            setTimeout(() => {
+              modifyWorkbanchStyle();
+            }, 200);
+          });
+        }
+        count = count + 1;
+        if (count >= 20) {
+          clearInterval(interval);
+        }
+      }, 500);
+    }
+
+    //缺陷和任务切换
+    {
+      let count = 0;
+      let interval = setInterval(() => {
+        let tabs = $('.aone-tabs-nav li');
+        if (tabs.length == 0) {
+          // console.log("tabs2 不存在 count: " + count);
+        } else {
+          console.log("tabs2 创建了 count: " + count);
+          clearInterval(interval);
+          $('.aone-tabs-nav li').on('click', function() {
+            console.log("点击了");
+            setTimeout(() => {
+              modifyWorkbanchStyle();
+            }, 200);
+          });
+        }
+        count = count + 1;
+        if (count >= 20) {
+          clearInterval(interval);
+        }
+      }, 500);
+    }
   }
   dealWorkbanchSwitch();
   GM_addStyle(`
@@ -204,7 +265,7 @@
     let interval = setInterval(() => {
       let toolbar = $('.topArea--workitemListTopAreaWrap--3vtibJU');
       if (toolbar.length == 0) {
-        console.log("toolbar 不存在 count: " + count);
+        // console.log("toolbar 不存在 count: " + count);
       } else {
         clearInterval(interval);
         console.log("toolbar 创建了 count: " + count);
@@ -264,14 +325,18 @@
   function collectButLinks() {
     var father = $(".km-toolbar .btn-group .btn-primary");
     console.log("father: " + father);
+
+    //导出link按钮
     let btn = '<i class="aone-icon aone-medium"><div class="xxl_copy_btn_filter aone-btn aone-medium aone-btn-primary isFourCNCharBtn is-yunxiao"><span class="aone-btn-helper">导出links</span></div></i>';
     $('.workitemList--workitemCategory--38_ZBpK').append(btn);
     $(".xxl_copy_btn_filter").attr("style", "margin-left: 10px !important;");
-    let str = "";
+
+    //点击导出link按钮
     $(".xxl_copy_btn_filter").click(function () {
       console.log("列出所有links");
       let bugList = $('.aone-table-body tr');
       let array = [];
+      let str = "";
       for (let i = 0; i < bugList.length; i++) {
         let ele = bugList[i];
         let lastTd = $(ele).find('td').last(0);
@@ -286,6 +351,43 @@
       addIndicator("您已复制所有bug链接!");
       GM_setClipboard(str);
     });
+
+    {
+      //导出link按钮
+      let btn = '<i class="aone-icon aone-medium"><div class="xxl_copy_id_title_btn_filter aone-btn aone-medium aone-btn-primary isFourCNCharBtn is-yunxiao"><span class="aone-btn-helper">导出id&title</span></div></i>';
+      $('.workitemList--workitemCategory--38_ZBpK').append(btn);
+      $(".xxl_copy_id_title_btn_filter").attr("style", "margin-left: 10px !important;");
+
+      //点击导出link按钮
+      $(".xxl_copy_id_title_btn_filter").click(function () {
+        console.log("列出所有links");
+        let bugList = $('.aone-table-body tr');
+        let count = 0;
+        let str = "";
+        for (let i = 0; i < bugList.length; i++) {
+          let ele = bugList[i];
+          let titleTd = $(ele).find('td').first();
+          let statusTd = $(ele).find('td').eq(1);
+          let lastTd = $(ele).find('td').last();
+
+          let title = $(titleTd).find('span').text();
+          let status = $(statusTd).find('span').text();
+          let bugId = $(lastTd).find('span').text();
+
+          let tastStr = bugId + " - " + status + " - " + title;
+          console.log(tastStr);
+          if (str.length > 0) {
+            str = str + '\n' + tastStr;
+          } else {
+            str = tastStr;
+          }
+          count = count + 1;
+        }
+        // console.log(str);
+        addIndicator("您已复制" + count + "个id和标题!");
+        GM_setClipboard(str);
+      });
+    }
   }
 
 })();

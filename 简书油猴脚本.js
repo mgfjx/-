@@ -27,7 +27,7 @@
   })();
 
   GM_addStyle(`
-    ._2OwGUo, ._19DgIp, ._13lIbp, ._1F7CTF {
+    ._2OwGUo, ._19DgIp, ._13lIbp, ._1F7CTF, ._11TSfs {
       display: none !important;
     }
     ._gp-ck {

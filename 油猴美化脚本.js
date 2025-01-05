@@ -20,6 +20,12 @@
   //知乎
   if (window.location.host == "www.zhihu.com") {
     console.log("知乎油猴...");
+
+    $('.QuestionHeader-main').remove();
+    $('.TopstoryPageHeader-main').remove();
+    $('.AppHeader-inner a svg').remove();
+    $('.AppHeader-inner a').text("首页");
+    $('.AppHeader-inner ul').remove();
     GM_addStyle(`
       .AdblockBanner, .Footer, .GlobalSideBar {
         display: none !important;

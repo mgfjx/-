@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class MyURLProtocol: NSURLProtocol {
 
   override class func canInitWithRequest(request: NSURLRequest) -> Bool {
@@ -115,3 +116,14 @@ class MyURLProtocol: URLProtocol, URLSessionDataDelegate {
   }
 
 }
+=======
+var obj = {"album":"Growth Music Checklist","alg":"alg-music-rec_cm_openDaily_daily","appId":"a30102000000000089c0ca99b44d8e9f","artist":"[{\\\"id\\\":\\\"6CF7D1DD1B91985F0E9942D1CB6F81BD\\\",\\\"name\\\":\\\"Anson Seabra\\\"}]","audioId":"A7F2881EE91808AF65515EC858F7A577","category":"","collectId":"1003","cpId":"wangyiyun","duration":192,"gmtModify":0,"logo":"http://p1.music.126.net/asNO9FiyBAdpCfR_uYi0hQ==/109951168225938771.jpg?param=500y500","path":"","playCount":0,"playable":true,"qualityOption":"[{\\\"needVip\\\":false,\\\"name\\\":\\\"流畅品质\\\",\\\"quality\\\":\\\"1\\\"}]","title":"Peter Pan Was Right","tryPlayFlag":false,"type":"music","updateTime":"","upgradeRole":0};
+// obj = {"collectId":"1003","collectName":"每日推荐","collectType":"selfBuild#daily_recommend","cpId":"wangyiyun","songsCount":30};
+obj = {"album":"Growth Music Checklist","alg":"alg-music-rec_cm_openDaily_daily","appId":"a30102000000000089c0ca99b44d8e9f","artist":"","audioId":"A7F2881EE91808AF65515EC858F7A577","category":"","collectId":"1003","cpId":"wangyiyun","duration":192,"gmtModify":0,"logo":"http://p1.music.126.net/asNO9FiyBAdpCfR_uYi0hQ==/109951168225938771.jpg?param=500y500","path":"","playCount":0,"playable":true,"qualityOption":"","title":"Peter Pan Was Right","tryPlayFlag":false,"type":"music","updateTime":"","upgradeRole":0}
+
+
+var jsonStr = JSON.stringify(obj);
+jsonStr = "{\"album\":\"Growth Music Checklist\",\"alg\":\"alg-music-rec_cm_openDaily_daily\",\"appId\":\"a30102000000000089c0ca99b44d8e9f\",\"artist\":\"\",\"audioId\":\"A7F2881EE91808AF65515EC858F7A577\",\"category\":\"\",\"collectId\":\"1003\",\"cpId\":\"wangyiyun\",\"duration\":192,\"gmtModify\":0,\"logo\":\"http://p1.music.126.net/asNO9FiyBAdpCfR_uYi0hQ==/109951168225938771.jpg?param=500y500\",\"path\":\"\",\"playCount\":0,\"playable\":true,\"qualityOption\":\"\",\"title\":\"Peter Pan Was Right\",\"tryPlayFlag\":false,\"type\":\"music\",\"updateTime\":\"\",\"upgradeRole\":0}";
+jsonStr = jsonStr.replace(/"/g, '\\"');
+console.log(jsonStr);
+>>>>>>> 3f751e90f4da4aed73fef90a0eb582d6388538cf

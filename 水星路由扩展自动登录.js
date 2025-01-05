@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // ==UserScript==
 // @name         水星路由扩展自动登录
 // @namespace    http://tampermonkey.net/
@@ -39,3 +40,36 @@
   `);
 
 })();
+=======
+// ==UserScript==
+// @name         水星路由扩展自动登录
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  水星路由扩展自动登录
+// @author       You
+// @include      http://melogin.cn/*
+// @match
+// @require      http://code.jquery.com/jquery-1.11.0.min.js
+// @grant        GM_addStyle
+
+// ==/UserScript==
+
+(function () {
+  "use strict";
+  console.log("水星路由扩展油猴...");
+
+
+  let interval = setInterval(() => {
+    let input = $('#lgPwd');
+    if (input.length > 0) {
+      console.log("xxl", input);
+      $('#lgPwd').val("136245");
+      clearInterval(interval);
+    }
+  }, 200);
+
+  GM_addStyle(`
+  `);
+
+})();
+>>>>>>> 3f751e90f4da4aed73fef90a0eb582d6388538cf
